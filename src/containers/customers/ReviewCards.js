@@ -31,7 +31,7 @@ export default function ReviewCards(props) {
       setIsFlipped(!flipRef.current);
       setRand(rnInt);
     }, 1000);
-  }, []);
+  }, [rand,props.data.frontImages.length]);
 
   return (
     <>

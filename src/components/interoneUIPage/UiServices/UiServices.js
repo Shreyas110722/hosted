@@ -16,8 +16,10 @@ import Ecommbg from "../../background/EcommBg";
 export default function Services() {
   const params = useParams();
   const { data } = useQuery(detailedServices, {
-    variables: { params: params.header, params: params.id },
+    variables: { params: params.id },
   });
+
+
   //   const {data:Data} = useQuery(serviceContent)
   debugger;
   //   if(params.id === "UI&UX Design"){
