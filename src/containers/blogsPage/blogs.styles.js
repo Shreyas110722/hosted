@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
   ${tw` w-full flex justify-start items-center`};
 
   @media (max-width: 768px) {
-    ${tw`   `};
+    margin-top: 20%;
   }
 `;
 
@@ -55,19 +55,11 @@ const SecHeadLayer = styled(TypedAnimation)`
   }
 `;
 const CardWrapper = styled.div`
-  /* ${tw`grid justify-items-center items-center mt-10`};
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  column-gap: 10px;
-  row-gap: 30px;
-  @media (max-width: 730px) {
-    ${tw`   `};
-
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  } */
 
   @media (max-width: 768px) {
     margin-top: 15%;
     display: grid;
+    gap:2rem;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(300px, auto);
   }
