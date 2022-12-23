@@ -43,7 +43,7 @@ export const Navbar = () => {
         </div>
       ) : (
         <S.Container>
-          <S.LogoWrapper1>
+          <S.LogoWrapper1 onClick={() => history.push("/#hello")}>
             <IOIcon />
           </S.LogoWrapper1>
           <S.LogoWrapper2>
