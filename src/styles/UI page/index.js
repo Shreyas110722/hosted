@@ -1,0 +1,6 @@
+export * as UiPagestyles  from "./UiPage.style."
+export * as UiMethodologystyles from  "./Uimethodology.style"
+export * as StepperStyles from "./Stepper.style"
+export * as  UiCardstyles  from "./UiCards.style"
+export * as RecentWorkStyles from "./RecentWork.style"
+export * as UiServiceStyles from "./UiServices.style"

@@ -1,0 +1,119 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Aldone", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+overflow-x: hidden;
+  background-color: black;
+  caret-color: gold;
+}
+
+code {
+  display: flex;
+  overflow-x: auto;
+}
+#tsparticles {
+  width: 100%;
+  height: 100%;
+}
+::selection {
+  background-color: #ffc400;
+  color: #000;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Aldone";
+  font-weight: 300;
+  src: url("./fonts/Aldone-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aldone";
+  font-weight: 400;
+  src: url("./fonts/Aldone-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aldone";
+  font-weight: 500;
+  src: url("./fonts/Aldone-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aldone";
+  font-weight: 600;
+  src: url("./fonts/Aldone-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aldone";
+  font-weight: 700;
+  src: url("./fonts/Aldone-Bold.otf") format("opentype");
+}
+.section {
+  padding: 2rem 0rem;
+}
+@media (max-width: 520px) {
+  .section {
+    padding: 0rem 0rem 2.5rem 0rem;
+  }
+}
+
+
+.rotate {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+.number {
+  font-size: 50px;
+}
+.num {
+  margin-top: 15%;
+}
+.image {
+  margin-left: -15px;
+  width: 135px;
+  height: 100px;
+  padding: 0 1rem;
+  object-fit: contain;
+}
+.title {
+  font-size: 22px;
+}
+.line {
+  position: relative;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2px;
+  width: 0;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background: gold;
+}
+.line:hover::after {
+  width: 25%;
+}
+@media (max-width: 768px) {
+  .line::after {
+    -moz-transition: none;
+    transition: none;
+  }
+  .line:hover::after {
+    width: 0;
+  }
+}
+@media (max-width: 468px){
+  .number{
+    font-size: 40px;
+  }
+}

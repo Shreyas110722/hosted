@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .link {
+    min-width: 12% !important;
+    margin-right:1%;
+  }
+}
+
+@media (max-width: 550px) {
+    .link {
+      min-width: 100% !important;
+      display: flex;
+      justify-content: center;
+    }
+  }

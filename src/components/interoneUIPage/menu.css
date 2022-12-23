@@ -1,0 +1,94 @@
+.menu {
+  background: black;
+  height: 39rem;
+  width: 76rem;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+  margin-top: -90px;
+  right: 55px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75%;
+    margin-top: -10rem;
+  }
+}
+.menu a {
+  color: rgb(255, 196, 0);
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.menu a:hover {
+  color: whitesmoke;
+  transform: translateX(20px);
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+  line-height: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+  .menu ul {
+    margin-top: 6%;
+  }
+}
+@media (max-width: 1024px) {
+  .menu ul {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .menu ul {
+    margin-top: 0%;
+  }
+}
+
+.menu ul li {
+  font-size: 16px;
+  transition: all 0.25s ease;
+  animation: fadeInRight 0.25s ease forwards;
+  opacity: 0;
+}
+.menu ul li:hover {
+  opacity: 0.8;
+  transition: all 0.25s ease;
+  color: #000;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s ease;
+  transform: translateX(0);
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
