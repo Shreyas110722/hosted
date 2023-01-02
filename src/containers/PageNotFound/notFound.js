@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./notFound.style";
 import AnimatedButton from "../../components/common/button/animatedButton";
 import { Link } from "react-router-dom";
-import bgimage from "../../assets/images/Layer 1interonel.png";
 
 const NotFound = () => {
   return (
