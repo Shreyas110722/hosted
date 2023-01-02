@@ -10,12 +10,12 @@ const Heading = styled.h2`
   color: grey;
   margin-bottom: 1%;
   font-size: 22px;
-  font-weight:800;
+  font-weight: 800;
   line-height: 1;
 `;
 
 const Paragraph = styled.p`
-  font-size:17px;
+  font-size: 17px;
   font-weight: 500;
 `;
 
@@ -32,6 +32,7 @@ const Container1 = styled.div`
 `;
 const Container2 = styled.div`
   display: flex;
+  column-gap: 0.5%;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -70,11 +71,13 @@ const Ensure = styled.div``;
 const Full = styled.div`
   flex-basis: 50%;
   padding: 1%;
+  border-right: groove;
 `;
 
-const ImageContainer = styled.div`
+const EnsureContainer = styled.div`
   flex-basis: 50%;
-  background-color: white;
+  padding: 1%;
+  border-left: groove;
 `;
 
 const Title = styled.div`
@@ -119,7 +122,7 @@ export {
   Title,
   Content,
   Full,
-  ImageContainer,
+  EnsureContainer,
   Validate,
   Ensure,
   Header,

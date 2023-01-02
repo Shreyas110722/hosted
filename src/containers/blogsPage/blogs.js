@@ -3,7 +3,6 @@ import * as S from "./blogs.styles";
 import Parallax from "parallax-js";
 import { gql, useQuery } from "@apollo/client";
 import BlogCard from "../blogs/BlogCard/BlogCard";
-// import { LinearProgress } from "../../components/common";
 import { Loading } from "../../assets/svgicon/svgIcons";
 import Navbar from "../../components/common/navbar/navbar";
 import { Link } from "react-router-dom";
@@ -36,10 +35,10 @@ const Blogs = (props) => {
       calibrate: (true, true),
     });
   }, []);
-  // eslint-disable-next-line
-  const { loading, data, error } = useQuery(mainQuery);
+  const { loading, data } = useQuery(mainQuery);
 
   return (
+    <>
     <S.Main>
       <Navbar />
       <S.Container>
@@ -58,16 +57,18 @@ const Blogs = (props) => {
           </div>
         ) : (
           <>
-            <S.CardWrapper>
+            <S.CardWrapper >
               {data?.blogCollection?.items &&
                 data?.blogCollection?.items.map((blog, index) => {
-                  return <BlogCard blog={blog} />;
+                  return <BlogCard key={index} blog={blog} />;
                 })}
             </S.CardWrapper>
           </>
         )}
       </S.Container>
-      <S.QuestionWrapper>
+
+    </S.Main>
+    <S.QuestionWrapper>
         <S.Question>
           <S.QuestionText>
             <p> Have A Question ? We Are Happy to Help</p>
@@ -77,7 +78,7 @@ const Blogs = (props) => {
           </Link>
         </S.Question>
       </S.QuestionWrapper>
-    </S.Main>
+    </>
   );
 };
 

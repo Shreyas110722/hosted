@@ -358,6 +358,7 @@ const mainQuery = gql`
         customers
         technologies
         blogs
+        careers
         contactUs
       }
     }

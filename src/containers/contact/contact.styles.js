@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
 
 const Container = styled.div`
-
   ${tw`w-full text-white flex flex-col justify-center items-center h-full pr-6  `}
   z-index: 10;
   @media (max-width: 768px) {
@@ -12,11 +11,15 @@ const Container = styled.div`
   }
   @media (max-width: 550px) {
     ${tw`pr-7   `}
+    margin-top:0;
+  }
+  @media (max-width: 450px) {
+    margin-top: 25%;
   }
 `;
 const ContentWrapper = styled.div`
   ${tw` w-full h-full text-white flex  justify-center items-center `};
-  margin-top:5%;
+  margin-top: 5%;
   z-index: 10;
   @media (max-width: 1290px) {
     margin-top: 0;
@@ -178,7 +181,6 @@ const ContactWrapper1 = styled.div`
     flex-basis: 33%;
 
     ${tw`  space-y-2 `};
-    /* margin-left: 0.25rem; */
   }
 `;
 
@@ -196,10 +198,15 @@ const FormWrapper = styled.div`
   }
 `;
 const SideLine = styled.div`
-  /* transform: translate(-50%, -50%); */
   ${tw`-ml-0 mt-20  `}
+  margin-top: -18rem;
+  @media (max-width: 850px) {
+    ${tw` -ml-16  -mt-10`};
+    margin-top: -21rem;
+  }
   @media (max-width: 768px) {
     ${tw` -ml-16  -mt-10`};
+    margin-top: -16rem;
   }
   @media (max-width: 650px) {
     ${tw` -ml-28 `};

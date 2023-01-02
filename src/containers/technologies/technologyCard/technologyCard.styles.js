@@ -12,9 +12,6 @@ const Container = styled.div`
   @media (max-width: 425px) {
     ${tw` rounded-bl-none rounded-tr-lg justify-start items-start p-2.5 `}
   }
-  /* @media (max-width: 361px) and (max-height:700px ){
-    ${tw` p-3  space-y-2   `}
-  } */
 `;
 const Heading = styled.div`
   ${tw`text-2xl text-gold font-bold -mt-0`}
@@ -40,7 +37,6 @@ const About = styled.div`
   -webkit-box-orient: vertical;
   position: relative;
   z-index: 50;
-  /* padding-bottom: 14px; */
   @media (max-width: 987px) {
     ${tw`  text-sm `}
   }
@@ -143,7 +139,7 @@ const Button = styled.button`
   }
 `;
 const ButtonWrapper = styled.div`
-cursor: pointer;
+  cursor: pointer;
 `;
 
 export {

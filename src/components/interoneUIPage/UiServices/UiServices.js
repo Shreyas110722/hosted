@@ -1,10 +1,8 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { useParams } from "react-router-dom";
-// import { useParams } from "react-router-dom";
 import { detailedServices } from "../../../queries";
 import { UiServiceStyles as SS } from "../../../styles/UI page";
-// import { UiPagestyles as S } from "../../../styles/UI page";
 import Ball from "../../../containers/hero/Ball/ball";
 import { Navbar } from "../../common";
 import RecentWork from "../UiRecentWork";
@@ -19,29 +17,11 @@ export default function Services() {
     variables: { params: params.id },
   });
 
-
-  //   const {data:Data} = useQuery(serviceContent)
-  debugger;
-  //   if(params.id === "UI&UX Design"){
-  //       <Ball/>
-  //   }
-  //   else{
-  //       <BackgroundAnimation/>
-  //   }
   return (
     <>
       <SS.Wrapper>
         <Navbar />
         <SS.Container>
-          {/* {(()=>{
- if(params.id === "UI&UX Design"){
-    <SS.BallWrapper>
-    <Ball />
-  </SS.BallWrapper>
- }
- else{
-   <BackgroundAnimation/>} 
-            })} */}
 
           <SS.BallWrapper>
             {params.id === "UI&UX Design" ? (
@@ -86,8 +66,6 @@ export default function Services() {
           <SS.SubText>
             <p>Establish And Escalate Brand Value</p>
             <SS.SubContent>
-              {/* {Data.servicesCollection.items.map ((item)=>(
-              <p>{item.content}</p>))} */}
               {params.id}/{params.header}
             </SS.SubContent>
           </SS.SubText>

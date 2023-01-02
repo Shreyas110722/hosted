@@ -81,18 +81,6 @@ const BlogDetails = (props) => {
       assetMap.set(asset.sys.id, asset);
     }
 
-    // create an entry map
-    // const entryMap = new Map();
-    // loop through the block linked entries and add them to the map
-    // for (const entry of links.entries.block) {
-    //   entryMap.set(entry.sys.id, entry);
-    // }
-
-    // loop through the inline linked entries and add them to the map
-    // for (const entry of links.entries.inline) {
-    //   entryMap.set(entry.sys.id, entry);
-    // }
-
     return {
       renderMark: {
         [MARKS.BOLD]: (text) => <S.BoldText>{text}</S.BoldText>,
@@ -172,23 +160,6 @@ const BlogDetails = (props) => {
             <S.BlogWrapper>
               <S.Title>{data?.blogCollection?.items[0].title}</S.Title>
               <S.ProfileWrapper>
-                {/* <S.Profile>
-                  <S.ProfileImage>
-                    <S.AuthorImage
-                      src={data?.blogCollection?.items[0].authorImage.url}
-                      alt={data?.blogCollection?.items[0].authorImage.title}
-                    />
-                  </S.ProfileImage>
-                  <S.NameDate>
-                    <S.Name>{data?.blogCollection?.items[0].authorName}</S.Name>
-                    <S.Date>
-                      {data?.blogCollection?.items[0].sys.publishedAt.substring(
-                        0,
-                        10
-                      )}
-                    </S.Date>
-                  </S.NameDate>
-                </S.Profile> */}
                 <S.SocialMedia>
                   <S.Icon>
                     <Instagram />
@@ -216,7 +187,10 @@ const BlogDetails = (props) => {
                 )}
               </S.Content>
             </S.BlogWrapper>
-            <S.QuestionWrapper>
+            
+            <Footer marginLeftZero />
+          </S.Container>
+          <S.QuestionWrapper>
               <S.Question>
                 <S.QuestionText>
                   <p> Have A Question ? We Are Happy to Help</p>
@@ -228,8 +202,6 @@ const BlogDetails = (props) => {
                 </Link>
               </S.Question>
             </S.QuestionWrapper>
-            <Footer marginLeftZero />
-          </S.Container>
         </>
       )}
     </div>

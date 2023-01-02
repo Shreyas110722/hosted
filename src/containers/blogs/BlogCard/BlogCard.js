@@ -6,24 +6,6 @@ import { Link, withRouter } from "react-router-dom";
 import "./BlogCard.css";
 
 const BlogCard = (props) => {
-  // const RICH_TEXT_OPTIONS = {
-  //   renderMark: {
-  //     [MARKS.BOLD]: (text) => <p className="text-white text-lg">{text}</p>,
-  //   },
-  //   renderNode: {
-  //     [BLOCKS.PARAGRAPH]: (node, children) => {
-  //       return <p className="text-lg text-white font-light">{children}</p>;
-  //     },
-  //     [INLINES.HYPERLINK]: (node, children) => {
-  //       return (
-  //         <a href={node.data.uri} className="text-gold underline">
-  //           {children}
-  //         </a>
-  //       );
-  //     },
-  //   },
-  // };
-
   const { blog } = props;
 
   return (
@@ -32,7 +14,6 @@ const BlogCard = (props) => {
       to={`/blogs/${blog.slugUrl}`}
       target="_self"
       style={{ minWidth: "14%", maxHeight: "100%" }}
-
     >
       <S.Card>
         <S.ImageWrapper>

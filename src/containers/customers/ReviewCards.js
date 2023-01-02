@@ -1,17 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as S from "./customers.styles";
-// import { FaComments } from "react-icons/fa";
-// import Tilt from "react-parallax-tilt";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 export default function ReviewCards(props) {
   const { tittle } = props;
-  // const { content, image, tittle } = props;
 
   const randomInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-    // console.log("ooo", min + 1);
-    // return min + 1;
   };
 
   const [isFlipped, setIsFlipped] = useState(false);
@@ -30,21 +25,11 @@ export default function ReviewCards(props) {
       const rnInt = randomInteger(rand, props.data.frontImages.length - 1);
       setIsFlipped(!flipRef.current);
       setRand(rnInt);
-    }, 1000);
-  }, [rand,props.data.frontImages.length]);
+    }, 3000);
+  }, [props.data.frontImages.length, rand]);
 
   return (
     <>
-      {/* <Tilt
-        tiltAngleXInitial={2}
-        tiltAngleYInitial={2}
-        tiltMaxAngleX={5}
-        tiltMaxAngleY={10}
-      > */}
-      {/* <S.ReviewCard> */}
-      {/* <S.CardHeader> */}
-      {/* {console.log("iiii",intervelName , props.index.toString())} */}
-      {/* <S.LogoWrapper className={`rotatable_${props.index} ${props.rndInt}`}> */}
       <S.LogoWrapper>
         {props.data.frontImages.map((item, index) => (
           <Flippy
@@ -60,7 +45,7 @@ export default function ReviewCards(props) {
           >
             <FrontSide
               style={{
-                backgroundColor: "#41669d",
+                backgroundColor: "black",
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
@@ -76,7 +61,7 @@ export default function ReviewCards(props) {
             </FrontSide>
             <BackSide
               style={{
-                backgroundColor: "#175852",
+                backgroundColor: "black",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -94,12 +79,6 @@ export default function ReviewCards(props) {
           </Flippy>
         ))}
       </S.LogoWrapper>
-      {/* </S.LogoWrapper>*/}
-      {/* </S.CardHeader> */}
-      {/* <FaComments /> */}
-      {/* <S.CardContent title={content}>{content}</S.CardContent> */}
-      {/* </S.ReviewCard> */}
-      {/* </Tilt> */}
     </>
   );
 }

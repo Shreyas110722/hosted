@@ -36,7 +36,7 @@ const CustomService = () => {
           {data?.uiCards.map((item,index) => (
             <S.ContentContainer key={index}>
               <S.ImageContainer>
-                <S.Image src={item.image} alt="" />
+                <S.Imagecard src={item.image} alt="" />
               </S.ImageContainer>
               <S.SubContent>
                 <S.Heading>{item.header}</S.Heading>

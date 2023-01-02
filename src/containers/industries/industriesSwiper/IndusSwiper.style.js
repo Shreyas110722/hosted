@@ -2,72 +2,37 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  /* @media(min-width:1024px){
-      width:80%;
-      margin-left: 5%;
-      
-      } */
-
-  /* @media(max-width:1024px){
-      width:100%;
-      
-      } */
-  /* @media(max-width:768px){
-    // margin-left: 8%;
-    }
-    @media(max-width:486px){
-    width:100%;
-    
-    } */
 `;
 
 const SwiperCard = styled.div`
   display: flex;
   justify-content: space-evenly;
-
-  /*
-  @media(max-width:486px){
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 81%;
-    margin-left: 9.4%;
-}
-  
-  @media (max-width:486px){
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 81%;
-    margin-left: 9.4%;
-
-  } */
+  height: 21rem;
 `;
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 21rem;
   border-radius: 20px;
 
   @media screen and (max-width: 486px) {
     width: 100%;
     object-fit: cover;
   }
-
-  /* @media screen  and (max-width:768px) {
-    
+  @media screen and (max-width: 768px) {
+    height: 19rem;
   }
-  @media screen  and (max-width:486px) {
-    margin-bottom: 10%;
-    max-width: 98%;
-    object-fit: cover;
-    
-  } */
 `;
 const ImageContainer = styled.div`
   flex-basis: 25%;
 
   @media screen and (max-width: 1280px) {
     flex-basis: 25%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    filter: brightness(0.5);
+    position: absolute;
+    height: -webkit-fill-available;
   }
 
   @media screen and (max-width: 486px) {
@@ -89,13 +54,19 @@ const Card = styled.div`
 
   @media screen and (max-width: 1024px) {
     flex-basis: 60%;
+    height: 21rem;
   }
-
-  @media screen and (max-width: 486px) {
+  @media screen and (max-width: 768px) {
     position: relative;
     flex-basis: 90%;
     border: none;
-    padding:2%;
+    padding: 2%;
+  }
+  @media screen and (max-width: 486px) {
+    position: relative;
+    flex-basis: 99%;
+    border: none;
+    padding: 2%;
   }
 `;
 const Number = styled.div`
@@ -106,6 +77,20 @@ const BigNum = styled.div`
   color: goldenrod;
   font-weight: 600;
 
+  background: linear-gradient(130deg, #daa520, #100303, #daa520);
+  background-size: 80%;
+  -webkit-animation: animate 1.5s linear infinite;
+  animation: animate 3.5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
   @media screen and (max-width: 1300px) {
     font-size: 65px;
   }
@@ -154,6 +139,20 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: 900;
   color: goldenrod;
+  background: linear-gradient(90deg, #ffffff, #daa520, #ffffff);
+  background-size: 80%;
+  -webkit-animation: animate 2.5s linear infinite;
+  animation: animate 3.5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
 
   @media screen and (min-width: 1024px) {
     font-size: 47px;
@@ -167,13 +166,13 @@ const Title = styled.div`
     font-size: 1.5rem;
   }
   @media screen and (max-width: 486px) {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
 `;
 const Content = styled.div`
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 800;
   margin-top: 3%;
 
   @media screen and (max-width: 1024px) {
@@ -187,17 +186,11 @@ const Content = styled.div`
   }
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.span`
   font-size: 20px;
 
-  @media screen and (max-width: 1300px) {
-    font-size: 20px;
-  }
-  @media screen and (max-width: 1280px) {
-    font-size: 15px;
-  }
   @media screen and (max-width: 1024px) {
-    font-size: 15px;
+    font-size: 17px;
   }
   @media screen and (max-width: 768px) {
     font-size: 1rem;

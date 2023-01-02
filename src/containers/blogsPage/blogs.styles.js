@@ -3,10 +3,20 @@ import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
 const Container = styled.div`
   ${tw`py-4 pr-10 pl-20`}
+  @media(max-width:768px){
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1.5rem;
+  }
 
   @media (max-width: 550px) {
-    ${tw`py-4 pr-10 pl-6`}
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
+
 `;
 const HeaderWrapper = styled.div`
   ${tw` w-full flex justify-start items-center`};
@@ -55,21 +65,24 @@ const SecHeadLayer = styled(TypedAnimation)`
   }
 `;
 const CardWrapper = styled.div`
-
   @media (max-width: 768px) {
-    margin-top: 15%;
-    display: grid;
-    gap:2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(300px, auto);
+    /* margin-top:10%;
+    display:flex;
+    flex-direction:column;
+    row-gap:2rem; */
+    margin-top:10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 135rem;
+    row-gap:2rem;
   }
   @media (max-width: 550px) {
-    margin-top: 15%;
-    row-gap: 2%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(300px, auto);
-    margin-bottom: 34rem;
+    margin-top:10%;
+    display:flex;
+    flex-Direction:column;
+    row-Gap:2rem;
+    height:100%;
   }
 `;
 

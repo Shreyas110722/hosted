@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Main = styled.div`
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
 
   @media screen and (max-width: 768px) {
     margin: 8%;

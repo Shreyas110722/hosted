@@ -31,11 +31,6 @@ export default function DetailedView() {
       calibrate: (true, true),
     });
   }, []);
-
-  // const handleClick = () => {
-  //   console.log("clicked");
-  //   window.open(`${params.heading}`);
-  // };
   return (
     <>
       <S.Container>
@@ -55,41 +50,9 @@ export default function DetailedView() {
 
                   <S.SubText>{main.content}</S.SubText>
                 </S.ImageText>
-                {/* <S.ImageWrapper>
-              <S.Image></S.Image>
-              </S.ImageWrapper> */}
               </S.ImageContent>
             ));
           })}
-
-          {/* <S.CardWrapper>
-            {data?.technologiesCollection?.items?.map((item, index) => {
-              return Cards.map((obj) => (
-                <S.DetailsCard>
-                  {params.heading === "Frontend Development" ? (
-                    <S.CardLogo>{obj.logo}</S.CardLogo>
-                  ) : null}
-
-                  <S.CardHeader index={item}>
-                    <p>{item.language[index]}</p>
-                  </S.CardHeader>
-                  <S.CardContent>
-                    <p>{obj.content}</p>
-                  </S.CardContent>
-                  <SS.SubText
-                    style={{ color: "#FFC400" }}
-                    onClick={() => handleClick()}
-                  >
-                    <p>Know More</p>
-                    <CgArrowLongRightR
-                      style={{ cursor: "pointer" }}
-                      href="#Knowmore"
-                    />
-                  </SS.SubText>
-                </S.DetailsCard>
-              ));
-            })}
-          </S.CardWrapper> */}
         </S.Hero>
         <S.HeroContent>
           <TechnologyDetails data={data} />
@@ -122,13 +85,9 @@ export default function DetailedView() {
           <Ss.QuestionText>
             <p> Have A Question ? We Are Happy to Help</p>
           </Ss.QuestionText>
-          {/* <S.Button> */}
           <Link to={`/#contact`}>
             <AnimatedButton buttonname="Contact Us">Contact Us</AnimatedButton>
-
-            {/* <CgArrowLongRightR /> */}
           </Link>
-          {/* </S.Button> */}
         </Ss.Question>
       </S.Container>
     </>

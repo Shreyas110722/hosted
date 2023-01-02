@@ -4,7 +4,6 @@ import { TypedAnimation } from "../../components/common";
 const Container = styled.div`
   ${tw`text-white w-full h-full flex justify-start items-start pr-10`};
   z-index: 10;
-  margin-top: -20%;
   @media (max-width: 520px) {
     ${tw`pr-6`}
   }
@@ -18,14 +17,11 @@ const MainWrapper = styled.div`
 `;
 
 const MainHeading = styled.div`
-  ${tw`  relative mt-16`};
+  ${tw`  relative`};
   margin-bottom: 5%;
   @media (max-width: 550px) {
     ${tw`mt-0`}
   }
-  /* @media (max-width: 350px) {
-    ${tw`mt-6`}
-  } */
 `;
 
 const FirstHeadLayer = styled.div`
@@ -60,11 +56,26 @@ const SecHeadLayer = styled(TypedAnimation)`
 `;
 
 const SideLine = styled.div`
-  ${tw`-ml-0  `}
-  margin-top:13%;
+  margin-left: 0;
+  margin-top: -24%;
+
+  @media(max-width:1540px){
+    margin-top: -32%;
+  }
+  @media (max-width: 1280px) {
+    margin-left: 0;
+    margin-top: -38%;
+  }
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    margin-top: -48%;
+  }
+  @media (max-width: 850px) {
+    margin-left: 0;
+    margin-top: -46%;
+  }
   @media (max-width: 768px) {
-    ${tw`-ml-16 -mt-10 `}
-    margin-left:5%;
+    margin-left: 5%;
   }
   @media (max-width: 550px) {
     display: none;
@@ -72,13 +83,15 @@ const SideLine = styled.div`
 `;
 const CardWrapper = styled.div`
   ${tw` space-x-2 ml-3 flex justify-start items-start w-full `};
-  margin-top: 10rem;
   margin-bottom: 2rem;
   height: 34rem;
   display: flex;
   flex-direction: column;
+  margin-left: 0;
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1540px) {
+    margin-top: 0rem;
+    margin-left:.5%;
     > * {
       &:nth-child(4) {
         display: none;
@@ -103,7 +116,6 @@ const CardWrapper = styled.div`
   }
   @media (max-width: 520px) {
     ${tw`ml-0 space-x-0  w-full`}
-    /* z-index: 1000; */
     > * {
       &:nth-child(1) {
         ${tw`w-full `}
@@ -139,17 +151,18 @@ const SecondContainer = styled.div`
     display: none;
   }
   @media (max-width: 768px) {
-    margin-left: 1%;
+    margin-top: 6%;
   }
 
   @media (max-width: 550px) {
-    ${tw`mx-2`}
-    margin-top: 22%;
   }
 `;
 
 const FirstContainer = styled.div`
-  margin-top: 3%;
+  margin-top: 7%;
+  @media (max-width: 1024px) {
+    margin-top: 9%;
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -162,9 +175,14 @@ const CardWrapper1 = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    margin-left: 1%;
   }
   @media (max-width: 550px) {
     width: 100%;
+    margin-left:0;
+  }
+  @media (max-width: 450px) {
+    margin-top: 15%;
   }
 `;
 
@@ -192,8 +210,7 @@ const MainHeading1 = styled.div`
     ${tw`mt-0`}
   }
   @media (max-width: 450px) {
-    ${tw`mt-6`}
-    margin-left:5%;
+
   }
 `;
 
@@ -236,16 +253,18 @@ const ButtonWrapper1 = styled.div`
 
 const ContentWrapper1 = styled.div`
   ${tw`w-full h-full flex flex-col justify-center items-start space-y-10`};
-  margin-left: 1%;
 `;
 const SideLine1 = styled.div`
   ${tw`-ml-0  `}
   margin-top:13%;
+
   @media (max-width: 768px) {
-    ${tw`-ml-16 -mt-10 `}
+    ${tw` -ml-16  mt-20`};
+    margin-top: -46%;
   }
   @media (max-width: 550px) {
     display: none;
+    margin-left:0;
   }
 `;
 
@@ -253,12 +272,18 @@ const Cards = styled.div`
   margin-top: 1%;
   display: flex;
   @media (max-width: 550px) {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 `;
 
 const HorizontalContainer = styled.div``;
-const CardContainer = styled.div``;
+const CardContainer = styled.div`
+  @media (max-width: 550px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+`;
+
 export {
   Container,
   HorizontalContainer,

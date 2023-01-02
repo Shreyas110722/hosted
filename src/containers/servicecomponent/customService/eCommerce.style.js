@@ -33,7 +33,7 @@ const SecondContainer = styled.div`
 const Title = styled.h1`
   font-size: 25px;
   font-weight: 900;
-  color:white;
+  color:goldenrod;
 
   @media (max-width: 550px) {
     font-size: 20px;

@@ -2,10 +2,16 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
 const Container = styled.div`
-  ${tw`flex justify-center items-center h-full w-full mt-0 pr-5  `};
+  ${tw`flex justify-center items-center h-full w-full pr-5  `};
+  margin-top: 3%;
   z-index: 10;
   @media (max-width: 768px) {
     ${tw`   `}
+  }
+  @media (max-width: 550px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 5%;
   }
   @media (max-width: 486px) {
     padding: 0;
@@ -30,15 +36,24 @@ const ContentWrapper = styled.div`
     display: flex;
     align-items: center;
   }
+  @media (max-width: 450px) {
+    margin-top: 0%;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 `;
 const HeaderWrapper = styled.div`
-  ${tw`text-left w-full flex justify-start items-end mt-10 pb-5`};
+  ${tw`text-left w-full flex justify-start items-end mt-10`};
   z-index: 10;
+  margin-bottom: 3%;
   @media (max-width: 1120px) {
     ${tw``};
   }
   @media (max-width: 768px) {
     ${tw`h-auto justify-start items-center `}
+  }
+  @media (max-width: 550px) {
   }
 
   @media (max-width: 486px) {
@@ -48,12 +63,13 @@ const HeaderWrapper = styled.div`
 `;
 const MainHeading = styled.div`
   ${tw`  flex justify-start items-center  relative  `};
+  margin-left: 0.5%;
+
   @media (max-width: 1120px) {
     ${tw``};
   }
   @media (max-width: 520px) {
     ${tw`mt-0 `}
-    margin-left:5%;
   }
 `;
 const Head = styled.div`
@@ -110,22 +126,8 @@ const IndustriesWrapper = styled.div`
     margin-top: 10%;
   }
   @media (max-width: 468px) {
-    width: 90%;
-    padding-right: 0;
-  }
-
-  /* @media (max-width: 1090px) {
-    ${tw` -ml-0`};
-  } */
-  /* @media (max-width: 768px) {
-    ${tw` p-0 pr-3 space-x-2 justify-start items-center -ml-0 mr-0 `}
-  }
-
-  @media (max-width: 520px) {
-    ${tw`p-0 pr-0 flex flex-col justify-start items-start -ml-0  space-x-0  space-y-1.5`};
     width: 100%;
-    /* padding-left: 10px; */
-  /* }  */
+  }
 `;
 const ImagesWrapper = styled.div`
   ${tw` flex flex-col  h-full justify-center items-center space-y-5    `}
@@ -160,7 +162,6 @@ const ImagesWrapper = styled.div`
 `;
 
 const IndustryImage1 = styled.div`
-  /* transform:scale(); */
   ${tw``}
   @media (max-width: 768px) {
     ${tw`transform  `}
@@ -174,20 +175,22 @@ const IndustryImage2 = styled.div`
 
   @media (max-width: 520px) {
     ${tw`block w-full`};
-    /* transform:scaleX(1.1); */
   }
 `;
 const SideLine = styled.div`
   ${tw`-ml-0 mt-8  `};
+  margin-top: -18.5rem;
   z-index: 10;
   @media (max-width: 1230px) {
     ${tw` -ml-0  mt-10`};
   }
   @media (max-width: 1120px) {
-    ${tw` -ml-0  mt-20`};
+    ${tw` -ml-0 `};
+    margin-top: -18rem;
   }
   @media (max-width: 768px) {
     ${tw` -ml-16  mt-20`};
+    margin-top: -40%;
   }
   @media (max-width: 550px) {
     display: none;

@@ -87,7 +87,24 @@ const RightImage = styled.div`
     flex-basis: 90%;
   }
 `;
-const Image = styled.img``;
+const Image = styled.img`
+
+
+`;
+
+const Imagecard = styled.img`
+
+width:6rem;
+ @media (max-width: 1024px) {
+    width:7rem;
+  }
+   @media (max-width: 768px) {
+    width:7rem;
+  }
+ @media (max-width: 486px) {
+    width:8rem;
+  }
+`;
 const SecondContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -159,7 +176,9 @@ const Card = styled.div`
   align-items: center;
   border-radius: 15px;
 `;
-const Main = styled.div``;
+const Main = styled.div`
+  margin-bottom: 1%;
+`;
 const ThirdImage = styled.img`
   transition: transform 1.05s ease-in-out;
 
@@ -187,4 +206,5 @@ export {
   Image,
   Paragraph,
   Heading,
+  Imagecard
 };

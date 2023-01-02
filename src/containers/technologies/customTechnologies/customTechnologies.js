@@ -1,4 +1,3 @@
-import "./customTechnologies.css";
 import * as S from "./customTechnologies.styles";
 
 const CustomTechnologies = ({ data }) => {

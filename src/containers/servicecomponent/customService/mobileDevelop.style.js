@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Main = styled.div`
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 `;
 const ImageContainer = styled.div`
   display: flex;
@@ -62,7 +62,7 @@ const Image1 = styled.img`
 `;
 const Image2 = styled.img`
   width: 50%;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
   @media (max-width: 768px) {
     width: 90%;
   }
@@ -82,7 +82,9 @@ margin-bottom: 2%;
   font-weight: 900;
 `;
 
-const Paragraph = styled.p``;
+const Paragraph = styled.p`
+font-size:18px;
+`;
 
 const SecondContainer = styled.div`
 margin-top: 5%;

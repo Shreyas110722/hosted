@@ -28,7 +28,7 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    min-width: 100%;
     ${tw`p-3`}
   }
 `;

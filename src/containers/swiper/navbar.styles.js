@@ -75,7 +75,7 @@ const NavLinksWrapper = styled.div`
 
   transform: translate(0);
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 52vh;
 
     ${tw`  flex flex-col  justify-center items-center space-x-0 -mb-56 mt-14 w-full text-center space-y-5 font-semibold text-xl bg-black `}
     transition: transform 1s linear;
@@ -94,11 +94,10 @@ const NavLinksWrapper = styled.div`
           }}
   }
 
-  @media (max-width: 516px) {
-    ${tw`mt-14 `}
-    height: 85vh;
+  @media (max-width: 550px) {
+    ${tw` `}
+    height: 70vh;
   }
-
 `;
 const MenuList = styled.div`
   &.active {
@@ -178,14 +177,12 @@ const HanburgerIcon = styled.div`
 
 const Blogs = styled.div`
   @media (max-width: 550px) {
-    margin-bottom: 5rem;
   }
 `;
 
 const Technology = styled.div`
-@media(max-width:450px){
-  margin-bottom: 40%;
-}
+  @media (max-width: 450px) {
+  }
 `;
 
 const Customers = styled.div``;
@@ -194,8 +191,28 @@ const Service = styled.div``;
 const Contact = styled.div``;
 const Hero = styled.div``;
 
+const Greetings = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Greetgif = styled.img`
+  width: 25%;
+  height: 40%;
+  @media (max-width: 450px) {
+    width: 60%;
+    height: 30%;
+  }
+`;
+const Careers = styled.div``;
+
 export {
   Container,
+  Careers,
+  Greetgif,
+  Greetings,
   Technology,
   Customers,
   Industry,

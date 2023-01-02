@@ -635,8 +635,13 @@ const ecomdata = [
   },
 ];
 
+const emojis={
+  smiley:"😀"
+}
+
 export {
   uiCards,
+  emojis,
   ecomdata,
   ecom,
   webDevelop,

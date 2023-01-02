@@ -13,8 +13,6 @@ const IndustriesImageWrapper = styled.div`
       ? tw`h-full w-full relative bg-gold border border-gold rounded-br-xl`
       : tw`h-full w-full relative bg-gold border border-gold`};
 
-  /* ${tw`h-full w-full relative bg-gold border border-gold`}; */
-
   z-index: 5;
   overflow: hidden;
   transition: all 0.3s;
@@ -24,8 +22,6 @@ const IndustriesImageWrapper = styled.div`
     right: 2.5%;
     text-align: center;
     overflow: hidden;
-  
-    /* transform: translateX(-10%); */
   }
 `;
 const IndustriesImage = styled.img`
@@ -53,7 +49,7 @@ const IndustriesTitle = styled.h4`
 
   display: none;
 `;
-  const IndustriesHeading = styled.h2`
+const IndustriesHeading = styled.h2`
   font-size: calc(1vw + 1rem);
   transition: all 1s;
   opacity: 0.8;

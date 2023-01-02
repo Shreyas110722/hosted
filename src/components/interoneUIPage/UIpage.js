@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./menu.css";
-// import UiCards from "./UiCards";
 import Ui from "./ui";
 
 import { UiPagestyles as S } from "../../styles/UI page";
@@ -52,8 +51,6 @@ const uiData = [
   },
 ];
 export function UiWebPage(props) {
-  // debugger;
-
   const servciceData = localStorage.getItem("servicesList");
   const parsed = JSON.parse(servciceData);
 
@@ -94,17 +91,9 @@ export function UiWebPage(props) {
         <S.Container>
           <Navbar />
           <S.Header></S.Header>
-          {/* <S.SideLine>
-          <SideLine />
-          </S.SideLine> */}
           <S.HeroContent>
             <S.HeroMenu>
               <S.Param>{params.id}</S.Param>
-              {/* <img
-                src="https://www.doodleblue.com/services/_nuxt/img/wt%20banner%20logo.ecc51bd.png"
-                alt=""
-                style={{width:"25rem",marginLeft:"-18rem"}}
-              /> */}
 
               <IoIosArrowDropdown
                 style={{ cursor: "pointer", width: "2rem" }}
@@ -139,23 +128,10 @@ export function UiWebPage(props) {
               </S.MenuWrapper>
             </S.HeroMenu>
             {data?.servicesCollection?.items.map((item) => (
-              <S.HeroText>
-                {item.content}
-                {/* <p>{content}</p> */}
-              </S.HeroText>
+              <S.HeroText>{item.content}</S.HeroText>
             ))}
           </S.HeroContent>
         </S.Container>
-        {/* <S.CardsWrapper>
-          {data?.servicesCollection?.items?.map((item) => (
-            <UiCards
-              text={item.header[0]}
-              title={item.title}
-              icons={item?.icon?.url}
-            ></UiCards>
-          ))}
-        </S.CardsWrapper> */}
-
         <S.MethodologyWrapper>
           <S.MethodologyHeader>Our {params.id} Methodology</S.MethodologyHeader>
           <S.Wrapper>
@@ -169,7 +145,6 @@ export function UiWebPage(props) {
           </S.Wrapper>
         </S.MethodologyWrapper>
         <RecentWork />
-        {/* <Footer marginLeftZero /> */}
       </S.SmoothScroll>
     </>
   );

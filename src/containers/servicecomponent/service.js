@@ -4,7 +4,6 @@ import Parallax from "parallax-js";
 import { SideLine } from "../../assets/svgicon/svgIcons";
 
 import { withRouter } from "react-router-dom";
-import { BackgroundAnimation } from "../../components/common";
 
 function Service({
   data,
@@ -30,7 +29,6 @@ function Service({
     new Parallax(scene, {
       relativeInput: true,
       hoverOnly: true,
-      // calibrate:(true, true)
     });
   }, [data,data1,data2,data3,data4,data5,data6]);
   const handleClick = (item) => {
@@ -41,7 +39,6 @@ function Service({
 
   return (
     <S.Container>
-      <BackgroundAnimation />
       <S.ServiceContainer>
         <S.SideLine>
           <SideLine />
@@ -116,5 +113,4 @@ function Service({
   );
 }
 
-const HOCServices = withRouter(Service);
-export default HOCServices;
+export default withRouter(Service);

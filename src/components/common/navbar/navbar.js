@@ -24,6 +24,7 @@ export const Navbar = () => {
           customers
           technologies
           blogs
+          careers
           contactUs
         }
       }
@@ -50,7 +51,10 @@ export const Navbar = () => {
             <SmallIoIcon />
           </S.LogoWrapper2>
           <S.NavLinksWrapper nav={nav}>
-            <S.NavLink activeClassName="active" onClick={() => history.push("/#hello")}>
+            <S.NavLink
+              activeClassName="active"
+              onClick={() => history.push("/#hello")}
+            >
               {data.navigationBarCollection.items[0].home}
             </S.NavLink>
             <S.NavLink onClick={() => history.push("/#service")}>
@@ -67,6 +71,12 @@ export const Navbar = () => {
             </S.NavLink>
             <S.NavLink onClick={() => history.push("/#blogs")}>
               {data.navigationBarCollection.items[0].blogs}
+            </S.NavLink>
+            <S.NavLink
+              href="https://interfaceone.grovehr.com/careers/job?id=620619f560ed7100262021ce"
+              target="_self"
+            >
+              {data.navigationBarCollection.items[0].careers}
             </S.NavLink>
             <S.NavLink onClick={() => history.push("/#contact")}>
               {data.navigationBarCollection.items[0].contactUs}

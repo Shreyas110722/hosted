@@ -60,7 +60,6 @@ function Contact({ data, footerData }) {
 
   return (
     <S.Container>
-      {/* <BackgroundAnimation /> */}
       <S.ContentWrapper>
         <S.SideLine>
           <SideLine />

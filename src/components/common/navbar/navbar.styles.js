@@ -74,7 +74,7 @@ const NavLinksWrapper = styled.div`
 
   transform: translate(0);
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 52vh;
 
     ${tw`  flex flex-col  justify-center items-center space-x-0 -mb-56 mt-14 w-full text-center space-y-5 font-semibold text-xl bg-black `}
     transition: transform 1s linear;

@@ -4,33 +4,45 @@ import { TypedAnimation } from "../../components/common";
 const Container = styled.div`
   ${tw`text-white h-full flex flex-col justify-center gap-y-8 `};
   width: 87%;
-  padding: 5rem 0rem 5rem 0rem;
   z-index: 10;
+  margin-left: 0.5%;
 
   @media (max-width: 1024px) {
     width: 86%;
   }
   @media (max-width: 768px) {
-    // font:22;
+    margin-top: -10%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 1.5rem;
+  }
+  @media (max-width: 550px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   @media (max-width: 486px) {
-    ${tw`p-2 mt-8 w-full`}
-    margin-top: 0;
+    ${tw` mt-8 w-full`}
+    margin-top: 15%;
   }
 `;
 const ContentWrapper = styled.div`
   ${tw` w-full h-full flex justify-center items-center  `};
   z-index: 10;
+  margin-top: 7%;
+
+  @media (max-width: 1024px) {
+    margin-top: 8%;
+  }
+
   @media (max-width: 768px) {
     ${tw` w-full h-full flex  justify-center items-center   `};
+    margin-top: 14%;
   }
   @media (max-width: 520px) {
-
-    margin-top: 10%;
-    margin-bottom: 15%;
+    margin-top: 0%;
     ${tw` w-full h-full flex flex-col justify-center items-center   `}
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+
   }
   @media (max-width: 370px) {
     ${tw`  space-y-4  `}
@@ -71,7 +83,15 @@ const HeaderText = styled.div`
   font-size: 2rem;
   font-weight: 600;
 
+  @media (max-width: 1300px) {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
   @media (max-width: 1024px) {
+    font-size: 2rem;
+    font-weight: 600;
     width: 100%;
   }
   @media (max-width: 768px) {
@@ -90,7 +110,16 @@ const CustomContent = styled.div`
   margin-top: 3%;
   font-size: 18px;
   font-weight: 500;
+
+  @media (max-width: 1300px) {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
   @media (max-width: 1024px) {
+    margin-top: 3%;
+    font-size: 18px;
+    font-weight: 500;
   }
   @media (max-width: 768px) {
     font-size: 13px;
@@ -104,8 +133,19 @@ const CustomContent = styled.div`
 
 const MainHeading = styled.div`
   ${tw`  flex justify-start items-center  relative `};
+
+  @media (max-width: 1280px) {
+    ${tw`  `}
+    margin-left: 1.5%;
+  }
+  @media (max-width: 1024px) {
+    ${tw`  `}
+  }
   @media (max-width: 768px) {
     ${tw`  `}
+  }
+  @media (max-width: 450px) {
+    margin-left:0;
   }
 `;
 const Head = styled.div`
@@ -125,15 +165,12 @@ const CardHeader = styled.div`
     }
   }
   @media (max-width: 520px) {
-    // height: 5.1rem;
   }
 `;
 const CardWrapper = styled.div`
-  /* ${tw` flex `} */
-  // min-width: 65%;
   width: 100%;
   @media (max-width: 520px) {
-    display:none;
+    display: none;
   }
 `;
 const ReviewCard = styled.div`
@@ -170,10 +207,6 @@ const LogoWrapper = styled.div`
   gap: 1rem;
   height: auto;
 
-  /* transition: transform 0.8s;
-  position: relative;
-  transform-style: preserve-3d; */
-
   @media (max-width: 1024px) {
     width: 8rem;
   }
@@ -186,17 +219,11 @@ const LogoWrapper = styled.div`
   }
 `;
 const Logo = styled.img`
-  ${tw`rounded-md h-full w-full`}/* border-radius: 1rem; */
-  /* transition: transform 2.8s;
-  position: absolute;
-  backface-visibility: hidden; */
+  ${tw`rounded-md h-full w-full`}
 `;
 
 const FlipImage = styled.img`
-  ${tw`rounded-md h-full w-full`}/* border-radius: 1rem; */
-/* position: absolute;
-  transform: rotateY(180deg);
-  backface-visibility: hidden; */
+  ${tw`rounded-md h-full w-full`}
 `;
 
 const CardHeaderText = styled.p`
@@ -298,8 +325,12 @@ const Content = styled.div`
   ${tw` flex items-center border border-gold  rounded-lg`}
   padding: 3rem;
   flex-direction: row;
-  padding-right:0;
+  padding-right: 0;
+  margin-left: 0.8%;
 
+  @media (max-width: 1280px) {
+    margin-left: 2%;
+  }
   @media (max-width: 1024px) {
     padding: 2%;
     flex-direction: column;
@@ -310,6 +341,7 @@ const Content = styled.div`
   }
   @media (max-width: 520px) {
     width: 100%;
+    margin-left:0;
   }
   @media (max-width: 326px) {
   }
@@ -353,12 +385,25 @@ const Image2 = styled.img`
   ${tw`   w-full h-full `};
 `;
 const SideLine = styled.div`
-  ${tw`-ml-8  `}
-  @media (max-width:1025px) {
+  ${tw`-ml-20  `}
+  margin-top: -40rem;
+
+  @media (max-width: 1280px) {
     ${tw`-ml-16`}
+    margin-top: -53rem;
+  }
+
+  @media (max-width: 1025px) {
+    ${tw`-ml-16`}
+    margin-top: -62rem;
+  }
+  @media (max-width: 850px) {
+    ${tw`-ml-16`}
+    margin-top: -62rem;
   }
   @media (max-width: 768px) {
     ${tw` -ml-16 `};
+    margin-top: -60rem;
   }
   @media (max-width: 550px) {
     display: none;
@@ -478,6 +523,7 @@ const Clints = styled.div`
   row-gap: 4rem;
   justify-content: start;
   flex-wrap: wrap;
+
   @media (max-width: 1024px) {
   }
   @media (max-width: 768px) {
@@ -492,18 +538,28 @@ const Project = styled.div`
   border-radius: 11px;
   flex-basis: 40%;
   display: flex;
-  box-shadow: -1px 0px 40px -7px goldenrod;
+
   flex-direction: column;
   position: relative;
   justify-content: center;
+
+  &:hover {
+    box-shadow: -1px 0px 40px -7px goldenrod;
+    transition: 1s;
+  }
+
   @media (max-width: 1024px) {
   }
   @media (max-width: 768px) {
+    box-shadow: -1px 0px 40px -7px goldenrod;
+    transition: 1s;
   }
   @media (max-width: 486px) {
     margin: 5%;
     flex-direction: column;
     flex-basis: 90%;
+    box-shadow: -1px 0px 40px -7px goldenrod;
+    transition: 1s;
   }
 `;
 

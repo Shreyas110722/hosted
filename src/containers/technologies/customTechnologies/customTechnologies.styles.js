@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 const Technologies = styled.div`
+margin-top:7%;
   @media (max-width: 1540px) {
-    height: 42rem;
   }
   @media (max-width: 1024px) {
-    height: 42rem;
+    margin-top:15%;
   }
   @media (max-width: 768px) {
+    margin-left:7%;
+    margin-top:15%;
   }
   @media (max-width: 550px) {
-    height: 85rem;
+    margin-left:0;
   }
   @media (max-width: 400px) {
   }
@@ -23,10 +25,7 @@ const Main = styled.div`
   border: 1px solid black;
   background-color: black;
   width: inherit;
-  height: 38rem;
   align-items: center;
-  margin-top: 13rem;
-  margin-bottom: 13rem;
   margin-left: 30rem;
 
   @media (min-width: 1540px) {
@@ -35,25 +34,23 @@ const Main = styled.div`
 
   @media (max-width: 1540px) {
     margin-left: 32rem;
-    margin-top: 0rem;
+    margin-top: 10%;
   }
 
-  @media (min-width: 1300px) and (max-width: 1400px) {
-    margin-left: 0rem;
-    margin-top: 7rem;
+  @media (max-width: 1400px) {
+    margin-left: 20rem;
   }
   @media (max-width: 1280px) {
     margin-left: 20rem;
-    margin-bottom: 0rem;
-    margin-top: 5rem;
   }
   @media (max-width: 1024px) {
     margin-left: 11rem;
-    margin-bottom: 0rem;
-    margin-top: 5rem;
+  }
+  @media (max-width: 850px) {
+    margin-left: 6.5rem;
   }
   @media (max-width: 768px) {
-    margin-left: 11rem;
+    margin-left: 7rem;
   }
   @media (max-width: 550px) {
     margin-top: 0;
@@ -70,8 +67,6 @@ const TransformationJourney = styled.div`
   width: 42rem;
   height: 50rem;
   margin: 0 auto;
-  padding: 20px;
-  margin-bottom: 50%;
 
   @media (max-width: 1540px) {
     width: 23rem;
@@ -83,6 +78,7 @@ const TransformationJourney = styled.div`
     height: 23rem;
   }
   @media (max-width: 768px) {
+    margin-bottom: 0;
   }
   @media (max-width: 550px) {
     /* width: 15rem;
@@ -521,12 +517,12 @@ const Content2 = styled.div`
   @media (max-width: 1540px) {
     max-width: 20rem;
     margin-left: -20.5rem;
-    margin-top: -19rem;
+    margin-top: -23rem;
     height: 10rem;
   }
   @media (max-width: 1024px) {
     width: 24rem;
-    margin-left: -24.5rem;
+    margin-left: -20.5rem;
   }
   @media (max-width: 550px) {
     width: 12rem;
@@ -650,7 +646,7 @@ const Content3 = styled.div`
   width: 44rem;
   height: 0;
   transition: all 0.5s ease-in-out;
-  transform: translateY(300px);
+  transform: translateY(100px);
   opacity: 0;
   color: goldenrod;
   background-color: black;
@@ -663,6 +659,9 @@ const Content3 = styled.div`
   @media (max-width: 1540px) {
     width: 19rem;
     margin-right: 11rem;
+  }
+  @media (max-width: 1300px) {
+ margin-top:0;
   }
   @media (max-width: 1024px) {
     width: 19rem;
@@ -756,9 +755,8 @@ const IconJourney3 = styled.div`
 `;
 
 const MobileTransformation = styled.div`
-  width: 22rem;
+  width:100%;
   height: 100%;
-  margin-left: -4rem;
 
   @media (min-width: 1024px) {
     display: none;
@@ -771,7 +769,6 @@ const MobileTransformation = styled.div`
   }
   @media (max-width: 550px) {
     display: block;
-    margin-left: 0rem;
   }
 `;
 const CardDetails = styled.div`
@@ -781,6 +778,7 @@ const CardDetails = styled.div`
   padding: 2%;
   text-align: center;
   margin-bottom: 2rem;
+  width:100%;
 
   @media (max-width: 550px) {
     box-shadow: 0px 3px 5px 2px goldenrod;

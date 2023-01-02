@@ -18,16 +18,16 @@ const TestingServices = () => {
             <S.Heading>{data?.title2SubContent}</S.Heading>
             <S.Paragraph>{data?.title2Content}</S.Paragraph>
           </S.Validate>
+        </S.Full>
+
+        <S.EnsureContainer>
           <S.Ensure>
             <S.Header>{data?.title3}</S.Header>
             <S.Heading>{data?.title3SubContent}</S.Heading>
             <S.Paragraph>{data?.title3Content}</S.Paragraph>
           </S.Ensure>
-        </S.Full>
-
-        <S.ImageContainer>
-          <S.Image src={data?.testingImage?.url} alt="" />
-        </S.ImageContainer>
+          {/* <S.Image src={data?.testingImage?.url} alt="" /> */}
+        </S.EnsureContainer>
       </S.Container2>
       <S.Container3>
         {data?.testingCard.map((item, index) => (
