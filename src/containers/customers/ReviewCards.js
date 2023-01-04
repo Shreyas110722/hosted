@@ -20,13 +20,19 @@ export default function ReviewCards(props) {
   const randomNumberRef = useRef(rand);
   randomNumberRef.current = rand;
 
+  const imageFlip = props.data.frontImages.length - 1;
+
   useEffect(() => {
-    setInterval(() => {
-      const rnInt = randomInteger(rand, props.data.frontImages.length - 1);
+    const Interval = setInterval(() => {
+      const rnInt = randomInteger(0, imageFlip);
       setIsFlipped(!flipRef.current);
       setRand(rnInt);
-    }, 3000);
-  }, []);
+    }, 1500);
+
+    return () => {
+      clearInterval(Interval);
+    };
+  }, [imageFlip]);
 
   return (
     <>
