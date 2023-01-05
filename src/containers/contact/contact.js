@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState, useRef } from "react";
 import * as S from "./contact.styles";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -11,18 +11,21 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { TextField, Button } from "../../components/common/mui";
 import { useForm } from "react-hook-form";
 
-function Contact({ data, footerData }) {
+const Contact = (props) => {
+  const { data, footerData } = props;
+  const [statusMessage, setStatusMessage] = useState("");
 
- const [statusMessage, setStatusMessage] = useState("");
+  const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
 
+  const phoneRegExp =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   const schema = yup.object().shape({
     fullName: yup.string().required("Full Name is required"),
     company: yup.string().required("Enter a company name"),
-    phoneNumber: yup
-      .number("Please enter only numbers")
-      .positive()
-      .integer("Please enter numbers only")
-      .required(),
+    phoneNumber: yup.string().matches(phoneRegExp, "Phone number is not valid"),
     email: yup.string().email("Please enter a valid email").required(),
   });
 
@@ -45,6 +48,12 @@ function Contact({ data, footerData }) {
       );
   }
   useEffect(() => {
+    setTimeout(() => {
+      setStatusMessage(null);
+    }, 5000);
+  }, [statusMessage]);
+
+  useEffect(() => {
     var scene = document.getElementById("contactHead");
     var parallaxInstance = new Parallax(scene, {
       relativeInput: true,
@@ -60,6 +69,13 @@ function Contact({ data, footerData }) {
     resolver: yupResolver(schema),
     mode: "onChange",
   });
+
+  const { ref: inputRef, ...inputProps } = register("fullName");
+  const { ref: inputrefforcompany, ...inputPropsForCompany } =
+    register("company");
+  const { ref: inputrefforphonenumber, ...inputPropsforPhoneNumber } =
+    register("phoneNumber");
+  const { ref: inputrefforemail, ...inputPropsforEmail } = register("email");
 
   return (
     <S.Container>
@@ -108,7 +124,8 @@ function Contact({ data, footerData }) {
                     <TextField
                       label="Full Name"
                       name="fullName"
-                      {...register("fullName")}
+                      inputRef={ref}
+                      {...inputProps}
                       error={errors.fullName ? true : false}
                     />
 
@@ -116,33 +133,39 @@ function Contact({ data, footerData }) {
                       label="Company Name"
                       fullWidth
                       name="company"
-                      {...register("company")}
+                      inputrefforcompany={ref1}
+                      {...inputPropsForCompany}
                       error={errors.company ? true : false}
                     />
                   </S.TextFieldWrapper>
-                  <S.TextFieldWrapper className="mb-3">
+                  <S.TextFieldWrapper className="mb-">
                     <TextField
                       label="Phone Number"
                       fullWidth
                       name="phoneNumber"
-                      {...register("phoneNumber")}
+                      inputrefforphonenumber={ref2}
+                      {...inputPropsforPhoneNumber}
                       error={errors.phoneNumber ? true : false}
                     />
 
                     <TextField
                       label="Email"
                       fullWidth
-                      {...register("email")}
+                      inputrefforemail={ref3}
+                      {...inputPropsforEmail}
                       name="email"
                       error={errors.email ? true : false}
                     />
                   </S.TextFieldWrapper>
-                  <Button type="submit" name="Send" disabled={!isValid} />
-                  <p className="text-xs text-red-800">
+                  <p
+                    className="text-l text-red-800"
+                    style={{ fontWeight: "bold" }}
+                  >
                     {errors.phoneNumber?.message} {errors.email?.message}
                   </p>
+                  <Button type="submit" name="Send" disabled={!isValid} />
                 </form>
-                <S.Message >{statusMessage}</S.Message>
+                {statusMessage && <S.Message>{statusMessage}</S.Message>}
               </S.Form>
             </S.FormWrapper>
           </S.CompanyInfoWrapper>
@@ -151,6 +174,6 @@ function Contact({ data, footerData }) {
       <Footer data={footerData} />
     </S.Container>
   );
-}
+};
 
 export default Contact;

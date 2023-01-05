@@ -47,8 +47,8 @@ function Hero() {
 
   const children =
     data?.blogCollection?.items &&
-    data?.blogCollection?.items.map((blog) => {
-      return <BlogCard blog={blog} />;
+    data?.blogCollection?.items.map((blog, index) => {
+      return <BlogCard key={index} blog={blog} />;
     });
 
   return (
@@ -93,12 +93,7 @@ function Hero() {
                     </S.FirstHeadLayer1>
                     <S.SecHeadLayer1 strings={["Blogs"]}></S.SecHeadLayer1>
                   </S.MainHeading1>
-                  <S.Cards>
-                    {data?.blogCollection?.items &&
-                      data?.blogCollection?.items.map((blog, index) => {
-                        return <BlogCard blog={blog} />;
-                      })}
-                  </S.Cards>
+                  <S.Cards>{children}</S.Cards>
                 </S.CardWrapper1>
               </S.ContentWrapper1>
               <Link to="/blogs" target="_self">
