@@ -62,6 +62,14 @@ const SideLine = styled.div`
   @media(max-width:1540px){
     margin-top: -32%;
   }
+
+  @media(max-width:1400px){
+    margin-top: -35%;
+  }
+  @media(max-width:1400px){
+    margin-top: -36%;
+
+  }
   @media (max-width: 1280px) {
     margin-left: 0;
     margin-top: -38%;
@@ -72,7 +80,7 @@ const SideLine = styled.div`
   }
   @media (max-width: 850px) {
     margin-left: 0;
-    margin-top: -46%;
+    margin-top: -61%;
   }
   @media (max-width: 768px) {
     margin-left: 5%;
@@ -175,7 +183,7 @@ const CardWrapper1 = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin-left: 1%;
+    margin-left: 0.5%;
   }
   @media (max-width: 550px) {
     width: 100%;

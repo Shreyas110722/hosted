@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 const ServiceContainer = styled.div`
-  ${tw` flex justify-center items-center w-full h-full `};
+${tw` flex justify-center items-center w-full h-full `};
   background-color: black;
   z-index: 10;
   @media (max-width: 768px) {
@@ -324,12 +324,16 @@ const SideLine = styled.div`
   @media (max-width: 1540px) {
     margin-top: -45%;
   }
+  @media (max-width: 1400px) {
+    margin-top: -41rem;
+  }
   @media (max-width: 1280px) {
     margin-top: -40rem;
   }
   @media (max-width: 1024px) {
     margin-top: -80rem;
   }
+
   @media (max-width: 850px) {
     margin-top: -73rem;
   }
@@ -344,6 +348,8 @@ const SideLine = styled.div`
     ${tw` hidden `};
   }
 `;
+
+
 
 const Cont = styled.data`
   -moz-transition: all 0.5s;

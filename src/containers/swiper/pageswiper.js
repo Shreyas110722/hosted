@@ -1,15 +1,7 @@
 import React, { lazy, Suspense } from "react";
-import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
+import "fullpage.js/vendors/scrolloverflow";
 import * as S from "./navbar.styles";
-// import ReactFullpage from "@fullpage/react-fullpage";
 import { IOIcon, SmallIoIcon } from "../../assets/svgicon/svgIcons";
-// import { Customers } from "../customers";
-// import { Contact } from "../contact";
-// import { Hero } from "../hero";
-// import { Industries } from "../industries";
-// import { Service } from "../servicecomponent";
-// import { Technologies } from "../technologies";
-// import { Blogs } from "../blogs";
 import { TimelineMax, CSSPlugin, gsap } from "gsap/all";
 import { withRouter } from "react-router-dom";
 gsap.registerPlugin(CSSPlugin);
@@ -72,7 +64,6 @@ class FullpageWrapper extends React.Component {
       blogs,
     } = this.props?.data?.navigationBarCollection?.items[0];
 
-    // data?.navigationBarCollection?.items[0]
     return (
       <Suspense
         fallback={
@@ -171,12 +162,11 @@ class FullpageWrapper extends React.Component {
               </S.MenuList>
               <S.MenuList data-menuanchor="careers" className="active">
                 <S.NavLink
-                 href="https://interfaceone.grovehr.com/careers/job?id=620619f560ed7100262021ce"
-                 target="_blank"
-                  // href="#cereers"
-                  // onClick={(e) => {
-                  //   this.setState({ nav: false });
-                  // }}
+                  href="https://interfaceone.grovehr.com/careers/job?id=620619f560ed7100262021ce"
+                  target="_blank"
+                  onClick={(e) => {
+                    this.setState({ nav: false });
+                  }}
                 >
                   {careers}
                 </S.NavLink>
@@ -219,22 +209,16 @@ class FullpageWrapper extends React.Component {
             </S.NavLinkContainer>
           </S.Container>
 
-          <S.Hero
-            className="section"
-            id="hello"
-            // data-percentage="100"
-            // data-centered="true"
-          >
+          <S.Hero className="section" id="hello">
             <Hero
               data={this.props.data?.heroPageCollection?.items[0]}
-              heroref={this.section}
+              ref={this.section}
             />
           </S.Hero>
 
           <S.Service className="section " id="service">
             <Service
               data={this.props.data?.servicesCollection?.items}
-              // fullpageApi={props.fullpageApi}
               data1={this.props.data?.customServiceCollection?.items[0]}
               data2={this.props.data?.customDevopsCollection?.items[0]}
               data3={this.props.data?.custTestingServiceCollection?.items[0]}

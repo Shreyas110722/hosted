@@ -8,12 +8,11 @@ import FullpageWrapper from "./containers/swiper/pageswiper";
 // import { LinearProgress } from "./components/common";
 import { BlogsPage } from "./containers/blogsPage";
 import { BlogDetails } from "./containers/blogDetails";
-// import { Loading } from "./assets/svgicon/svgIcons";
-import Loader from "./assets/images/Layer 1interonel.png";
 import Services from "./components/interoneUIPage/UiServices/UiServices";
 import DetailedView from "./containers/technologies/TechnologyDetails/TechnologyDetails";
 import IndustriesFullPage from "./containers/industries/industriesCardFullpage/IndustriesFullpage";
 import NotFound from "./containers/PageNotFound/notFound";
+import * as S from "./containers/swiper/navbar.styles";
 // import IndustriesFullPage from "./containers/industries/industriesCardFullpage/IndustriesFullpage";
 // import Uiheader from "./components/interoneUIPage/Uiheader";
 
@@ -25,9 +24,12 @@ function App() {
       {error ? (
         <Route path="/not-found" component={NotFound} />
       ) : loading ? (
-        <div className="  w-full h-full flex justify-center items-center  p-10">
-          <img style={{ width: "20rem" }} src={Loader} alt=""></img>
-        </div>
+        <S.Greetings>
+          <S.Greetgif
+            src="https://images.ctfassets.net/7q3wfja5yi7p/aMlhuIamv3y5ZrojdFOdp/d03ba6306ede85ae6922f9fb37c16d46/Your_para.gif?h=250"
+            alt=""
+          />
+        </S.Greetings>
       ) : (
         <>
           <Switch>
@@ -49,10 +51,6 @@ function App() {
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
           </Switch>
-          {/* {data.map((item)=>{ */}
-          {/* <Route exact path="/Uiheader" component={Uiheader} /> */}
-          {/* ${item.heading}${item.description} */}
-          {/* })} */}
         </>
       )}
     </div>

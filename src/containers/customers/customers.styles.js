@@ -42,7 +42,6 @@ const ContentWrapper = styled.div`
   @media (max-width: 520px) {
     margin-top: 0%;
     ${tw` w-full h-full flex flex-col justify-center items-center   `}
-
   }
   @media (max-width: 370px) {
     ${tw`  space-y-4  `}
@@ -134,18 +133,15 @@ const CustomContent = styled.div`
 const MainHeading = styled.div`
   ${tw`  flex justify-start items-center  relative `};
 
-  @media (max-width: 1280px) {
-    ${tw`  `}
-    margin-left: 1.5%;
-  }
   @media (max-width: 1024px) {
     ${tw`  `}
   }
   @media (max-width: 768px) {
     ${tw`  `}
+    margin-left: 0;
   }
   @media (max-width: 450px) {
-    margin-left:0;
+    margin-left: 0;
   }
 `;
 const Head = styled.div`
@@ -328,9 +324,6 @@ const Content = styled.div`
   padding-right: 0;
   margin-left: 0.8%;
 
-  @media (max-width: 1280px) {
-    margin-left: 2%;
-  }
   @media (max-width: 1024px) {
     padding: 2%;
     flex-direction: column;
@@ -341,7 +334,7 @@ const Content = styled.div`
   }
   @media (max-width: 520px) {
     width: 100%;
-    margin-left:0;
+    margin-left: 0;
   }
   @media (max-width: 326px) {
   }
@@ -387,7 +380,10 @@ const Image2 = styled.img`
 const SideLine = styled.div`
   ${tw`-ml-20  `}
   margin-top: -40rem;
-
+  @media (max-width: 1400px) {
+    ${tw`-ml-16`}
+    margin-top: -39rem;
+  }
   @media (max-width: 1280px) {
     ${tw`-ml-16`}
     margin-top: -53rem;
@@ -395,7 +391,6 @@ const SideLine = styled.div`
 
   @media (max-width: 1025px) {
     ${tw`-ml-16`}
-    margin-top: -62rem;
   }
   @media (max-width: 850px) {
     ${tw`-ml-16`}

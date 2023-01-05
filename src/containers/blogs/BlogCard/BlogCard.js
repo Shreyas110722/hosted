@@ -1,6 +1,4 @@
 import React from "react";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-// import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import * as S from "./BlogCard.styles";
 import { Link, withRouter } from "react-router-dom";
 import "./BlogCard.css";
@@ -22,7 +20,6 @@ const BlogCard = (props) => {
         <S.Details>
           <S.Title>{blog.title}</S.Title>
           <S.Description>
-            {/* {documentToReactComponents(blog.description.json, RICH_TEXT_OPTIONS)} */}
             {blog.description.json.content[0].content[0].value}
           </S.Description>
         </S.Details>

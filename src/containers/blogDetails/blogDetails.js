@@ -4,18 +4,16 @@ import { useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { useLocation } from "react-router-dom";
+import Loader from "../../assets/images/Layer 1interonel.png";
 import { Link } from "react-router-dom";
 import AnimatedButton from "../../components/common/button/animatedButton";
 import {
   Instagram,
   FacebookIcon,
   Twitter,
-  Loading,
 } from "../../assets/svgicon/svgIcons";
-
 import * as S from "./blogDetails.styles";
 import { Navbar, Footer } from "../../components/common";
-// import { LinearProgress } from "../../components/common";
 
 const BlogDetails = (props) => {
   const [slugUrl, setSlugUrl] = React.useState(props.match.params.slugUrl);
@@ -69,14 +67,11 @@ const BlogDetails = (props) => {
       }
     }
   `;
-  // eslint-disable-next-line
   const { loading, data } = useQuery(mainQuery, {
     variables: { slugUrl: slugUrl },
   });
   function renderOptions(links) {
-    // create an asset map
     const assetMap = new Map();
-    // loop through the assets and add them to the map
     for (const asset of links.assets.block) {
       assetMap.set(asset.sys.id, asset);
     }
@@ -151,7 +146,8 @@ const BlogDetails = (props) => {
     <div>
       {loading ? (
         <div className="w-full h-screen flex justify-center items-center p-10">
-          <Loading />
+          {/* <Loading /> */}
+          <img style={{ width: "20rem" }} src={Loader} alt=""></img>
         </div>
       ) : (
         <>
@@ -187,21 +183,21 @@ const BlogDetails = (props) => {
                 )}
               </S.Content>
             </S.BlogWrapper>
-            
+
             <Footer marginLeftZero />
           </S.Container>
           <S.QuestionWrapper>
-              <S.Question>
-                <S.QuestionText>
-                  <p> Have A Question ? We Are Happy to Help</p>
-                </S.QuestionText>
-                <Link to={`/#contact`}>
-                  <AnimatedButton buttonname="Contact Us">
-                    Contact Us
-                  </AnimatedButton>
-                </Link>
-              </S.Question>
-            </S.QuestionWrapper>
+            <S.Question>
+              <S.QuestionText>
+                <p> Have A Question ? We Are Happy to Help</p>
+              </S.QuestionText>
+              <Link to={`/#contact`}>
+                <AnimatedButton buttonname="Contact Us">
+                  Contact Us
+                </AnimatedButton>
+              </Link>
+            </S.Question>
+          </S.QuestionWrapper>
         </>
       )}
     </div>

@@ -5,7 +5,7 @@ import Ui from "./ui";
 import { UiPagestyles as S } from "../../styles/UI page";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { Link, useParams } from "react-router-dom";
+import { Link, Redirect, useParams } from "react-router-dom";
 
 import RecentWork from "./UiRecentWork";
 import { useQuery } from "@apollo/client";
@@ -58,6 +58,7 @@ export function UiWebPage(props) {
   const [menuStatus, setMenuStatus] = useState("open");
 
   const params = useParams();
+
   const { data } = useQuery(serviceContent, {
     variables: { params: params.id },
   });
@@ -85,69 +86,80 @@ export function UiWebPage(props) {
         setStyle("");
     }
   };
-  return (
-    <>
-      <S.SmoothScroll>
-        <S.Container>
-          <Navbar />
-          <S.Header></S.Header>
-          <S.HeroContent>
-            <S.HeroMenu>
-              <S.Param>{params.id}</S.Param>
 
-              <IoIosArrowDropdown
-                style={{ cursor: "pointer", width: "2rem" }}
-                onClick={() => {
-                  handleClick();
-                }}
-              />
-              <S.MenuWrapper className={style}>
-                <AiOutlineCloseCircle
-                  style={{
-                    fill: "white",
-                    marginLeft: "auto",
-                    cursor: "pointer",
-                  }}
+  if (data?.servicesCollection?.items.length === 0) {
+    return <Redirect to="/not-found" />;
+  } else {
+    return (
+      <>
+        <S.SmoothScroll>
+          <S.Container>
+            <Navbar />
+            <S.Header></S.Header>
+            <S.HeroContent>
+              <S.HeroMenu>
+                <S.Param>{params.id}</S.Param>
+
+                <IoIosArrowDropdown
+                  style={{ cursor: "pointer", width: "2rem" }}
                   onClick={() => {
                     handleClick();
                   }}
                 />
+                <S.MenuWrapper className={style}>
+                  <AiOutlineCloseCircle
+                    style={{
+                      fill: "white",
+                      marginLeft: "auto",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      handleClick();
+                    }}
+                  />
 
-                <ul>
-                  {parsed?.length &&
-                    parsed?.map((item) => (
-                      <li key={item?.id} onClick={() => handleChange(item)}>
-                        <div>
-                          <Link to={`/service/${item.title}`}>
-                            <h1>{item.title}</h1>
-                          </Link>
-                        </div>
-                      </li>
-                    ))}
-                </ul>
-              </S.MenuWrapper>
-            </S.HeroMenu>
-            {data?.servicesCollection?.items.map((item) => (
-              <S.HeroText>{item.content}</S.HeroText>
-            ))}
-          </S.HeroContent>
-        </S.Container>
-        <S.MethodologyWrapper>
-          <S.MethodologyHeader>Our {params.id} Methodology</S.MethodologyHeader>
-          <S.Wrapper>
-            {uiData.map((obj) => (
-              <Ui
-                number={obj.number}
-                stepheader={obj.stepheader}
-                stepcontent={obj.stepcontent}
-              ></Ui>
-            ))}
-          </S.Wrapper>
-        </S.MethodologyWrapper>
-        <RecentWork />
-      </S.SmoothScroll>
-    </>
-  );
+                  <S.UnorderedList>
+                    {parsed?.length &&
+                      parsed?.map((item,index) => (
+                        <S.List
+                          key={index}
+                          onClick={() => handleChange(item)}
+                        >
+                          <S.TitleContainer>
+                            <Link to={`/service/${item.title}`}>
+                              <S.Heading>{item.title}</S.Heading>
+                            </Link>
+                          </S.TitleContainer>
+                        </S.List>
+                      ))}
+                  </S.UnorderedList>
+                </S.MenuWrapper>
+              </S.HeroMenu>
+              {data?.servicesCollection?.items.map((item, index) => (
+                <S.HeroText key={index}>{item.content}</S.HeroText>
+              ))}
+            </S.HeroContent>
+          </S.Container>
+          <S.MethodologyWrapper>
+            <S.MethodologyHeader>
+              Our {params.id} Methodology
+            </S.MethodologyHeader>
+            <S.Wrapper>
+              {uiData.map((obj, index) => (
+                <Ui
+                  key={index}
+                  number={obj.number}
+                  stepheader={obj.stepheader}
+                  stepcontent={obj.stepcontent}
+                ></Ui>
+              ))}
+            </S.Wrapper>
+          </S.MethodologyWrapper>
+          <RecentWork />
+        </S.SmoothScroll>
+      </>
+    );
+  }
 }
 
 export default UiWebPage;

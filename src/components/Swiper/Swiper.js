@@ -1,4 +1,10 @@
 import React from "react";
+// import { SwiperSlide } from "swiper/react";
+// import { useQuery } from "@apollo/client";
+// import { customerContent } from "../../queries";
+// import { pic } from "../../utils/Servicedata";
+// import { images, flipimages } from "../../utils/Servicedata";
+
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";

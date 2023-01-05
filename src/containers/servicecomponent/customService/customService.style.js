@@ -180,7 +180,7 @@ const Main = styled.div`
   margin-bottom: 1%;
 `;
 const ThirdImage = styled.img`
-  transition: transform 1.05s ease-in-out;
+  transition: transform 2.05s ease-in-out;
 
   &:hover {
     transform: scale(1.5, 1.5);

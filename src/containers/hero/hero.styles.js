@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
-import Cube from "./cube";
 import { keyframes } from "styled-components";
 
 const Container = styled.div`
@@ -10,11 +9,9 @@ const Container = styled.div`
 `;
 const MainWrapper = styled.div`
   ${tw` w-full h-screen flex justify-center items-center    `};
-  /* background-image: url(${(<Cube />)}); */
   background-repeat: repeat;
   background-blend-mode: lighten;
   background-size: 50px 50px;
-  /* background-position: 50%; */
   animation: animatedBackground 20s linear infinite;
   background-image: black;
 
@@ -27,7 +24,6 @@ const MainWrapper = styled.div`
     }
   }
 
-  /* z-index: 10; */
   @media (max-width: 520px) {
     ${tw`  flex flex-col  justify-center items-center px-6 `};
   }
@@ -57,10 +53,7 @@ const Head = styled.div`
 `;
 
 const FirstHeadLayer = styled.div`
-  /* z-index: -1; */
   ${tw`text-7xl  text-gold  w-full  font-bold`}
-  /* -webkit-text-stroke: 1px white;
-  -webkit-text-fill-color: black; */
   font-size: 120px;
   @media (max-width: 768px) {
     font-size: 100px;
@@ -133,8 +126,10 @@ const ContentText = styled.span`
   }
 
   @media (max-width: 768px) {
+    ${tw`text-xl`};
   }
   @media (max-width: 590px) {
+    ${tw`text-base`};
   }
 `;
 const RightContainer = styled.div`
@@ -228,7 +223,7 @@ const animate = keyframes`
 const Cubediv = styled.div`
   position: absolute;
   display: flex;
-  width: 96vw;
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -240,7 +235,7 @@ const Cubediv = styled.div`
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(#000, goldenrod, #000);
     animation: ${animate} 3s linear infinite;
   }
@@ -252,47 +247,20 @@ const Cubediv = styled.div`
 const Box = styled.span`
   position: relative;
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background: black;
   z-index: 1;
   transition: 1.5s;
 
-  @media (min-width: 1540px) {
-    width: 45px;
-    height: 45px;
+  @media (max-width: 1370px) and (min-width: 1300px) {
+    width: 49.5px;
+    height: 49.5px;
   }
-
-  @media (max-width: 920px) {
-    width: 50.5px;
-    height: 50.5px;
-  }
-
-  @media (max-width: 821px) {
+  @media (max-width: 450px) and (min-width:389px){
     width: 48px;
     height: 48px;
   }
-  @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
-  }
-  @media (max-width: 550px) {
-    width: 48px;
-    height: 48px;
-  }
-  @media (max-width: 440px) {
-    width: 40px;
-    height: 40px;
-  }
-  @media (max-width: 400px) {
-    width: 42px;
-    height: 42px;
-  }
-  @media (max-width: 376px) {
-    width: 40.5px;
-    height: 40.5px;
-  }
-
   &:hover {
     background: goldenrod;
     transition: 0s;

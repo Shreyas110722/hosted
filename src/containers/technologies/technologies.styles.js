@@ -200,14 +200,22 @@ const Icon = styled.div`
 const SideLine = styled.div`
   ${tw`-ml-0 mt-8  `}
   margin-top: -33%;
-  @media(max-width:1540px){
+  ${tw`-ml-0 mt-8  `}
+  margin-top: -33%;
+  @media (max-width: 1540px) {
     margin-top: -35%;
   }
-  @media(max-width:1280px){
-    margin-top:-38%;
+  @media (max-width: 1400px) {
+    margin-top: -37%;
+  }
+  @media (max-width: 1280px) {
+    margin-top: -38%;
   }
   @media (max-width: 1024px) {
     margin-top: -52%;
+  }
+  @media (max-width: 850px) {
+    margin-top: -62%;
   }
 
   @media (max-width: 768px) {
@@ -218,7 +226,7 @@ const SideLine = styled.div`
     ${tw` -ml-28 `};
     margin-left: -3rem;
   }
-  @media (max-width: 550px) {
+   @media (max-width: 550px) {
     ${tw` hidden `};
     display: none;
   }

@@ -67,11 +67,11 @@ const Heading = styled.h3`
 
   @media (max-width: 768px) {
     display: block;
-    font-size: 4rem;
+    font-size: 8rem;
     color:goldenrod;
   }
   @media (max-width: 550px) {
-    font-size: 3rem;
+    font-size: 6rem;
   }
   @media (max-width: 450px) {
     font-size: 7rem;

@@ -155,7 +155,7 @@ const Title = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    font-size: 47px;
+    font-size: 44px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -187,7 +187,8 @@ const Content = styled.div`
 `;
 
 const Paragraph = styled.span`
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
 
   @media screen and (max-width: 1024px) {
     font-size: 17px;

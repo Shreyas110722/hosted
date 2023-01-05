@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import * as S from "./contact.styles";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -10,8 +10,11 @@ import { Footer } from "../../components/common/footer";
 import Tooltip from "@material-ui/core/Tooltip";
 import { TextField, Button } from "../../components/common/mui";
 import { useForm } from "react-hook-form";
-// import { BackgroundAnimation } from "../../components/common";
+
 function Contact({ data, footerData }) {
+
+ const [statusMessage, setStatusMessage] = useState("");
+
   const schema = yup.object().shape({
     fullName: yup.string().required("Full Name is required"),
     company: yup.string().required("Enter a company name"),
@@ -34,10 +37,10 @@ function Contact({ data, footerData }) {
       )
       .then(
         (result) => {
-          alert("Email sent");
+          setStatusMessage("Email sent success");
         },
         (error) => {
-          alert("Resent Email");
+          setStatusMessage(`${error.text} happened`);
         }
       );
   }
@@ -69,10 +72,10 @@ function Contact({ data, footerData }) {
             <S.MainHeading>
               <S.Head data-relative-input="true" id="contactHead">
                 <S.FirstHeadLayer data-depth="0.6">
-                  {data.heading}
+                  {data?.heading}
                 </S.FirstHeadLayer>
               </S.Head>
-              <S.SecHeadLayer strings={[data.heading]}></S.SecHeadLayer>
+              <S.SecHeadLayer strings={[data?.heading]}></S.SecHeadLayer>
             </S.MainHeading>
           </S.HeaderWrapper>
 
@@ -102,18 +105,19 @@ function Contact({ data, footerData }) {
               <S.Form>
                 <form onSubmit={(e) => sendEmail(e)} className="w-full">
                   <S.TextFieldWrapper>
-                    {" "}
                     <TextField
                       label="Full Name"
-                      fullWidth
                       name="fullName"
                       {...register("fullName")}
+                      error={errors.fullName ? true : false}
                     />
+
                     <TextField
                       label="Company Name"
                       fullWidth
                       name="company"
                       {...register("company")}
+                      error={errors.company ? true : false}
                     />
                   </S.TextFieldWrapper>
                   <S.TextFieldWrapper className="mb-3">
@@ -122,6 +126,7 @@ function Contact({ data, footerData }) {
                       fullWidth
                       name="phoneNumber"
                       {...register("phoneNumber")}
+                      error={errors.phoneNumber ? true : false}
                     />
 
                     <TextField
@@ -129,14 +134,15 @@ function Contact({ data, footerData }) {
                       fullWidth
                       {...register("email")}
                       name="email"
+                      error={errors.email ? true : false}
                     />
                   </S.TextFieldWrapper>
                   <Button type="submit" name="Send" disabled={!isValid} />
                   <p className="text-xs text-red-800">
                     {errors.phoneNumber?.message} {errors.email?.message}
-                    {errors.company?.message} {errors.fullName?.message}
                   </p>
                 </form>
+                <S.Message >{statusMessage}</S.Message>
               </S.Form>
             </S.FormWrapper>
           </S.CompanyInfoWrapper>

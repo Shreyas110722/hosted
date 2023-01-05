@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
+import { keyframes } from "styled-components";
 
 const Container = styled.div`
   ${tw`w-full text-white flex flex-col justify-center items-center h-full pr-6  `}
@@ -202,7 +203,7 @@ const SideLine = styled.div`
   margin-top: -18rem;
   @media (max-width: 850px) {
     ${tw` -ml-16  -mt-10`};
-    margin-top: -21rem;
+    margin-top: -20rem;
   }
   @media (max-width: 768px) {
     ${tw` -ml-16  -mt-10`};
@@ -231,7 +232,42 @@ const TextFieldWrapper = styled.div`
     ${tw`flex-col space-x-0`}
   }
 `;
+
+const fadeOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(.25);
+    opacity: 1;
+  }
+`;
+const fadeIn = keyframes`
+  from {
+    transform: scale(.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const Message = styled.p`
+  color: green;
+  font-weight: 600;
+
+  display: inline-block;
+  visibility: ${(props) => (props.out ? "hidden" : "visible")};
+  animation: ${(props) => (props.out ? fadeOut : fadeIn)} 1s linear;
+  transition: visibility 1s linear;
+`;
+
 export {
+  Message,
   Container,
   Main,
   HeaderWrapper,

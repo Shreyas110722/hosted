@@ -60,17 +60,15 @@ const HeroContent = styled.div`
   }
 `;
 const SideLine = styled.div``;
-const Param= styled.div`
- font-Size: 5rem;
-  z-Index: 1;
-  @media (max-width:768px) {
-font-size: 4rem;
-    
-  } 
-  @media (max-width:550px) {
-font-size: 2.5rem;
-    
-  } 
+const Param = styled.div`
+  font-size: 5rem;
+  z-index: 1;
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 550px) {
+    font-size: 2.5rem;
+  }
   /* @media (max-width:400px) {
 font-size: 2rem;
     
@@ -192,7 +190,7 @@ const MethodologyHeader = styled.h2`
   animation-name: fade-in-bottom;
   font-size: 2rem;
   font-weight: 900;
-  color:goldenrod;
+  color: goldenrod;
   @media (max-width: 374px) {
     text-align: center;
   }
@@ -213,19 +211,27 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
   }
   @media (max-width: 486px) {
     margin-left: 0px;
-  
-
   }
 `;
 const SmoothScroll = styled.div``;
 
+const UnorderedList = styled.ul``;
+
+const List = styled.li``;
+
+const Heading = styled.h1``;
+
+const TitleContainer=styled.div``;
+
 export {
   Container,
+  TitleContainer,
+  Heading,
+  List,
+  UnorderedList,
   MainPage,
   Header,
   HeaderLogo,
@@ -240,5 +246,5 @@ export {
   MethodologyHeader,
   Wrapper,
   SmoothScroll,
-  Param
+  Param,
 };

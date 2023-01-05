@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { forwardRef } from "react";
 import { SideLine } from "../../assets/svgicon/svgIcons";
 import Cube from "./cube";
 import * as S from "./hero.styles";
-function Hero({ data, heroref }) {
-  useEffect(() => {}, []);
+
+const Hero = forwardRef((props, ref) => {
+  const { data } = props;
 
   return (
-    <S.Container ref={heroref}>
+    <S.Container ref={ref}>
       <S.Cubediv>
         <Cube />
       </S.Cubediv>
@@ -36,6 +37,6 @@ function Hero({ data, heroref }) {
       </S.MainWrapper>
     </S.Container>
   );
-}
+});
 
 export default Hero;

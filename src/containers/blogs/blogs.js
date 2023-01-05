@@ -6,7 +6,6 @@ import * as S from "./blogs.styles";
 import { gql, useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
 import AnimatedButton from "../../components/common/button/animatedButton";
-// import { BackgroundAnimation } from "../../components/common";
 import HorizontalScroll from "react-scroll-horizontal";
 
 const mainQuery = gql`
@@ -46,12 +45,17 @@ function Hero() {
   // eslint-disable-next-line
   const { loading, data, error } = useQuery(mainQuery);
 
+  const children =
+    data?.blogCollection?.items &&
+    data?.blogCollection?.items.map((blog) => {
+      return <BlogCard blog={blog} />;
+    });
+
   return (
     <>
       <S.HorizontalContainer>
         <S.FirstContainer className="relative">
           <S.Container>
-            {/* <BackgroundAnimation /> */}
             <S.MainWrapper>
               <S.SideLine>
                 <SideLine />
@@ -65,10 +69,8 @@ function Hero() {
                     <S.SecHeadLayer strings={["Blogs"]}></S.SecHeadLayer>
                   </S.MainHeading>
                   <HorizontalScroll>
-                    {data?.blogCollection?.items &&
-                      data?.blogCollection?.items.map((blog, index) => {
-                        return <BlogCard blog={blog} />;
-                      })}
+                    {children}
+                    <div></div>
                   </HorizontalScroll>
                 </S.CardWrapper>
               </S.ContentWrapper>

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const BoldText = styled.p`
+const BoldText = styled.div`
   ${tw`text-lg text-gold font-bold inline-block`}
 `;
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   ${tw`text-lg text-white font-normal`}
 `;
 const Heading2 = styled.h2`
@@ -116,7 +116,7 @@ const Image = styled.img`
   max-height: 25rem;
   max-width: 100%;
 `;
-const Content = styled.p`
+const Content = styled.div`
   ${tw`w-full text-left border border-gold rounded-lg p-5`};
   font-size: min(max(1rem, 4vw), 22px);
 `;

@@ -131,6 +131,9 @@ const NavLinkContainer = styled.div`
   }
   z-index: 100;
   ${tw`hidden cursor-pointer`}
+  @media (max-width: 850px) {
+    ${tw`  py-2 w-full flex justify-end items-center mt-1    mr-10  `}
+  }
   @media (max-width: 768px) {
     ${tw`  py-2 w-full flex justify-end items-center mt-1    mr-10  `}
   }

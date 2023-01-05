@@ -16,18 +16,35 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiInputBase-input": {
       color: "#FFC400",
-      marginBottom:"5%"
+      marginBottom: "5%",
       // backgroundColor: "red",
     },
     "& .MuiInput-underline:after": {
       borderBottomColor: "#ffc400",
-      marginBottom:"5%"
-      
+      marginBottom: "5%",
     },
     "& .MuiInput-underline:before": {
       borderBottomColor: "#ffc400",
-      marginBottom:"5%"
+      marginBottom: "5%",
     },
+    "& .Mui-error": {
+      "&.MuiInput-underline:after": {
+        borderBottomColor: "red",
+        marginBottom: "5%",
+      },
+      "&.MuiInput-underline:before": {
+        borderBottomColor: "red",
+        marginBottom: "5%",
+      },
+    },
+
+    // "& TextField.MuiInput-underline:before": {
+    //   borderBottomColor: "red",
+    // },
+    // "& .MuiInput-underline:after": {
+    //   borderBottomColor: "red",
+    // },
+
     "&:hover fieldset": {
       borderColor: "#ffc400",
     },

@@ -24,7 +24,7 @@ export default function ReviewCards(props) {
 
   useEffect(() => {
     const Interval = setInterval(() => {
-      const rnInt = randomInteger(0, imageFlip);
+      const rnInt = randomInteger(0,imageFlip);
       setIsFlipped(!flipRef.current);
       setRand(rnInt);
     }, 1500);
