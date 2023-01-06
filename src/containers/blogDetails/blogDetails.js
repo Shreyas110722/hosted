@@ -183,21 +183,21 @@ const BlogDetails = (props) => {
                 )}
               </S.Content>
             </S.BlogWrapper>
+            <S.QuestionWrapper>
+              <S.Question>
+                <S.QuestionText>
+                  <p> Have A Question ? We Are Happy to Help</p>
+                </S.QuestionText>
+                <Link to={`/#contact`}>
+                  <AnimatedButton buttonname="Contact Us">
+                    Contact Us
+                  </AnimatedButton>
+                </Link>
+              </S.Question>
+            </S.QuestionWrapper>
 
             <Footer marginLeftZero />
           </S.Container>
-          <S.QuestionWrapper>
-            <S.Question>
-              <S.QuestionText>
-                <p> Have A Question ? We Are Happy to Help</p>
-              </S.QuestionText>
-              <Link to={`/#contact`}>
-                <AnimatedButton buttonname="Contact Us">
-                  Contact Us
-                </AnimatedButton>
-              </Link>
-            </S.Question>
-          </S.QuestionWrapper>
         </>
       )}
     </div>

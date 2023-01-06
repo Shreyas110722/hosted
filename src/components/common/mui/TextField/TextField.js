@@ -31,20 +31,14 @@ const useStyles = makeStyles((theme) => ({
       "&.MuiInput-underline:after": {
         borderBottomColor: "red",
         marginBottom: "5%",
+        fontSize: "30px",
       },
       "&.MuiInput-underline:before": {
         borderBottomColor: "red",
         marginBottom: "5%",
+        fontSize: "30px",
       },
     },
-
-    // "& TextField.MuiInput-underline:before": {
-    //   borderBottomColor: "red",
-    // },
-    // "& .MuiInput-underline:after": {
-    //   borderBottomColor: "red",
-    // },
-
     "&:hover fieldset": {
       borderColor: "#ffc400",
     },

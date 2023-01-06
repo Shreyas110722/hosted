@@ -35,6 +35,10 @@ const Container = styled.div`
   &.active {
     ${tw`text-gold`}
   }
+  @media (max-width: 830px) {
+    ${tw`flex justify-between items-start py-2 pl-2  `}
+    align-items: center;
+  }
   @media (max-width: 768px) {
     ${tw`flex justify-between items-start py-2 pl-5  `}
   }
@@ -71,13 +75,15 @@ const NavLinksWrapper = styled.div`
   z-index: 50;
   animation: ${Link} 2s ease-in-out 1 forwards;
 
-  ${tw` flex justify-center items-center text-lg space-x-14  w-full `};
+  ${tw` flex justify-center items-center text-lg  w-full `};
+  display: flex;
+  justify-content: space-evenly;
 
   transform: translate(0);
   @media (max-width: 768px) {
     height: 52vh;
 
-    ${tw`  flex flex-col  justify-center items-center space-x-0 -mb-56 mt-14 w-full text-center space-y-5 font-semibold text-xl bg-black `}
+    ${tw`  flex flex-col  justify-center items-center space-x-0 -mb-56 mt-14 w-full text-center  font-semibold text-xl bg-black `}
     transition: transform 1s linear;
 
     right: 0;
@@ -131,9 +137,9 @@ const NavLinkContainer = styled.div`
   }
   z-index: 100;
   ${tw`hidden cursor-pointer`}
-  @media (max-width: 850px) {
+  /* @media (max-width: 850px) {
     ${tw`  py-2 w-full flex justify-end items-center mt-1    mr-10  `}
-  }
+  } */
   @media (max-width: 768px) {
     ${tw`  py-2 w-full flex justify-end items-center mt-1    mr-10  `}
   }

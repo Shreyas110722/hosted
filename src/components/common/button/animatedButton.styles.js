@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const ButtonContainer = styled.a`
+const ButtonContainer = styled.span`
   text-decoration: none;
   ${tw`relative py-2 px-5 bg-gold text-black rounded-xl`}
   border: 2px solid black;

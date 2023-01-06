@@ -21,7 +21,7 @@ const Contact = (props) => {
   const ref3 = useRef(null);
 
   const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+    /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
   const schema = yup.object().shape({
     fullName: yup.string().required("Full Name is required"),
     company: yup.string().required("Enter a company name"),
@@ -127,6 +127,7 @@ const Contact = (props) => {
                       inputRef={ref}
                       {...inputProps}
                       error={errors.fullName ? true : false}
+                      autoComplete="off"
                     />
 
                     <TextField
@@ -136,6 +137,7 @@ const Contact = (props) => {
                       inputrefforcompany={ref1}
                       {...inputPropsForCompany}
                       error={errors.company ? true : false}
+                      autoComplete="off"
                     />
                   </S.TextFieldWrapper>
                   <S.TextFieldWrapper className="mb-">
@@ -146,6 +148,7 @@ const Contact = (props) => {
                       inputrefforphonenumber={ref2}
                       {...inputPropsforPhoneNumber}
                       error={errors.phoneNumber ? true : false}
+                      autoComplete="off"
                     />
 
                     <TextField
@@ -155,6 +158,7 @@ const Contact = (props) => {
                       {...inputPropsforEmail}
                       name="email"
                       error={errors.email ? true : false}
+                      autoComplete="off"
                     />
                   </S.TextFieldWrapper>
                   <p

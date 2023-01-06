@@ -257,9 +257,9 @@ const Box = styled.span`
     width: 49.5px;
     height: 49.5px;
   }
-  @media (max-width: 450px) and (min-width:389px){
-    width: 48px;
-    height: 48px;
+  @media (max-width: 450px) and (min-width: 300px) {
+    width: 36px;
+    height: 36px;
   }
   &:hover {
     background: goldenrod;
