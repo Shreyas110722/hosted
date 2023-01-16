@@ -104,10 +104,15 @@ const NavLinksWrapper = styled.div`
     ${tw` `}
     height: 70vh;
   }
+  @media (max-width: 450px) {
+    ${tw` `}
+    height: 89vh;
+  }
 `;
 const MenuList = styled.div`
   &.active {
     ${tw`text-white `}
+    margin-bottom:2rem;
   }
 `;
 const NavLink = styled.a`
@@ -202,7 +207,7 @@ const Hero = styled.div``;
 
 const Greetings = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

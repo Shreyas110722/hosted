@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 const ServiceContainer = styled.div`
-${tw` flex justify-center items-center w-full h-full `};
+${tw` flex justify-center items-start w-full h-full `};
   background-color: black;
   z-index: 10;
   @media (max-width: 768px) {
@@ -320,26 +320,30 @@ const Content = styled.p`
 `;
 const SideLine = styled.div`
   ${tw`-ml-0 mt-8  `}
-  margin-top: -40rem;
+  margin-top:5%;
+  /* margin-top: -40rem; */
+  @media (max-width: 2000px) {
+   margin-top:3%;
+  }
   @media (max-width: 1540px) {
-    margin-top: -45%;
+   margin-top:4%;
   }
   @media (max-width: 1400px) {
-    margin-top: -41rem;
+    /* margin-top: -41rem; */
   }
   @media (max-width: 1280px) {
-    margin-top: -40rem;
+    margin-top:5%;
   }
   @media (max-width: 1024px) {
-    margin-top: -80rem;
+    margin-top:4%;
   }
 
   @media (max-width: 850px) {
-    margin-top: -73rem;
+    margin-top:5%;
   }
   @media (max-width: 768px) {
     ${tw` -ml-16  mt-10`};
-    margin-top: -56rem;
+    margin-top:5%;
   }
   @media (max-width: 650px) {
     ${tw` -ml-28 `};

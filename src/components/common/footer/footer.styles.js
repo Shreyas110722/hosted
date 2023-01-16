@@ -47,10 +47,11 @@ const SvgIcon = styled.div`
 `;
 const Rights = styled.p`
   ${tw`font-light pr-5 text-sm text-center ml-auto	`}
+  margin-top: 2%;
 
   @media(max-width:2000px){
     margin-bottom: 0;
-    margin-top: 1%;
+    margin-top: 2%;
   }
   @media (max-width:650px) {
     ${tw` w-full`}

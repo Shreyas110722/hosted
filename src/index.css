@@ -26,7 +26,7 @@ code {
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+/* @tailwind utilities; */
 
 @font-face {
   font-family: "Aldone";
@@ -139,7 +139,7 @@ code {
   .swiper-button-next {
     display: none !important;
   }
-  .swiper-wrapper{
+  .swiper-wrapper {
     /* gap: 3% !important; */
   }
 }
@@ -160,9 +160,9 @@ code {
 }
 
 /* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
+/* ::-webkit-scrollbar {
+  width: 2px;
+} */
 
 /* Track */
 /* ::-webkit-scrollbar-track {
@@ -171,12 +171,12 @@ code {
 } */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: goldenrod;
+/* ::-webkit-scrollbar-thumb {
+  background: goldenrod !important;
   border-radius: 5px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: grey;
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background: goldenrod !important;
+} */

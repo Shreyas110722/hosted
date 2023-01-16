@@ -100,6 +100,7 @@ const Question = styled.div`
 const QuestionText = styled.div`
   ${tw`text-gold text-4xl font-semibold`}
 
+
   @media (max-width:768px) {
     font-size: 2.3rem;
     font-weight: 900;

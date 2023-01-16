@@ -76,12 +76,15 @@ const SubText = styled.div`
 `;
 const QuestionWrapper = styled.div`
   padding-top: 0rem;
+  margin-top:1.5rem;
+  margin-bottom:1rem;
 `;
 const Question = styled.div`
   ${tw`flex flex-col items-center gap-y-4`}
 `;
 const QuestionText = styled.div`
   ${tw`text-gold text-4xl font-semibold`}
+  margin-bottom:1rem;
 
   @media (max-width:768px) {
     font-size: 2.3rem;

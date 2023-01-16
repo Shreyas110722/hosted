@@ -30,7 +30,9 @@ function Technologies({ data, data1 }) {
             <S.SecHeadLayer strings={[data[0].__typename]}></S.SecHeadLayer>
           </S.MainHeading>
         </S.HeaderWrapper>
-        <CustomTechnologies data={data1} />
+        <S.TechnologyContainer>
+          <CustomTechnologies data={data1} />
+        </S.TechnologyContainer>
       </S.ContentWrapper>
     </S.Container>
   );

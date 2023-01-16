@@ -186,6 +186,7 @@ const TextTranslate = styled.div`
   z-index: 10;
   @media (max-width: 520px) {
     margin-top: 5%;
+    height: 50px;
   }
 `;
 
@@ -223,7 +224,7 @@ const animate = keyframes`
 const Cubediv = styled.div`
   position: absolute;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import bgimage from "../../components/interoneUIPage/Ui-images/backyellow.png";
 const Container = styled.div`
   position: relative;
-  height: 50rem;
+  height: 100vh;
   background-image: url(${bgimage});
   background-repeat: repeat;
   background-blend-mode: lighten;
@@ -22,7 +22,14 @@ const Container = styled.div`
     }
   }
 
+  @media (max-width: 920px) {
+    height: 60vh;
+  }
+
   @media (max-width: 768px) {
+  }
+  @media (max-width: 550px) {
+    height: 100vh;
   }
 `;
 const MainPage = styled.div``;
@@ -136,17 +143,29 @@ const CardsWrapper = styled.div`
 `;
 const MenuWrapper = styled.div`
   ${tw`w-full -mr-14 `}
-  margin-top: 12rem;
-  height: 51rem;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
   position: absolute;
   z-index: 10;
 
-  @media (max-width: 769px) {
-    flex-direction: column;
-    display: flex;
+  @media (max-width: 2000px) {
+    margin-top: 5%;
+  }
+
+  @media (max-width: 1540px) {
+    margin-top: 10%;
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 5%;
+  }
+  @media (max-width: 550px) {
+    margin-top: 80%;
   }
   @media (max-width: 430px) {
-    margin-top: 23rem;
+    margin-top: 90%;
   }
   .menu ul {
     margin-left: 4rem;
@@ -224,7 +243,7 @@ const List = styled.li``;
 
 const Heading = styled.h1``;
 
-const TitleContainer=styled.div``;
+const TitleContainer = styled.div``;
 
 export {
   Container,

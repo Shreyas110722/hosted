@@ -1,31 +1,28 @@
 .menu {
   background: black;
-  height: 39rem;
-  width: 76rem;
+  height: 100vh;
+  width: 100%;
   opacity: 0;
   position: absolute;
   visibility: hidden;
   transition: all 0.25s ease;
   transform: translateX(-50%);
-  margin-top: -90px;
   right: 55px;
 }
 
 @media (max-width: 768px) {
   .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+
+  }
+}
+@media (max-width: 550px) {
+  .menu {
+    margin-top: 60vh;
   }
 }
 @media (max-width: 430px) {
   .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 75%;
-    margin-top: -10rem;
+
   }
 }
 .menu a {
@@ -53,7 +50,7 @@
 }
 @media (max-width: 1024px) {
   .menu ul {
-    margin-top: 20%;
+    margin-top: 0%;
   }
 }
 @media (max-width: 768px) {

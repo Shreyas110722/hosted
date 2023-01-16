@@ -148,6 +148,8 @@ const Question = styled.div`
 `;
 const QuestionText = styled.div`
   ${tw`text-gold text-4xl font-semibold`}
+  margin-bottom:1rem;
+  margin-bottom:1rem;
 
   @media (max-width:768px) {
     font-size: 2.3rem;

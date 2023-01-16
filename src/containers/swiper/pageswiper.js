@@ -78,7 +78,7 @@ class FullpageWrapper extends React.Component {
         <div className="relative">
           <S.Container
             id="myMenu"
-            className="absolute top-0 left-0 bg-blue-500 flex text-white"
+            className="fixed top-0 left-0 flex text-white"
           >
             <div data-menuanchor="hello">
               <S.LogoWrapper1>

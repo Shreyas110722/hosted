@@ -9,7 +9,7 @@ const Container = styled.div`
   }
 `;
 const MainWrapper = styled.div`
-  ${tw` w-full h-full flex justify-start items-center   `};
+  ${tw` w-full h-full flex justify-start items-start   `};
   z-index: 10;
   @media (max-width: 520px) {
     ${tw`  flex flex-col  justify-center items-center pl-6   `};
@@ -57,33 +57,34 @@ const SecHeadLayer = styled(TypedAnimation)`
 
 const SideLine = styled.div`
   margin-left: 0;
-  margin-top: -24%;
-
-  @media(max-width:1540px){
-    margin-top: -32%;
+  /* margin-top: -24%; */
+  margin-top: 5%;
+  @media (max-width: 2000px) {
+    margin-top: 3%;
   }
 
-  @media(max-width:1400px){
-    margin-top: -35%;
+  @media (max-width: 1540px) {
+    margin-top: 3.5%;
   }
-  @media(max-width:1400px){
-    margin-top: -36%;
 
+  @media (max-width: 1400px) {
+    /* margin-top: -35%; */
   }
+
   @media (max-width: 1280px) {
     margin-left: 0;
-    margin-top: -38%;
+    margin-top: 4%;
   }
   @media (max-width: 1024px) {
     margin-left: 0;
-    margin-top: -48%;
+    margin-top: 5%;
   }
   @media (max-width: 850px) {
     margin-left: 0;
-    margin-top: -61%;
+    /* margin-top: -61%; */
   }
   @media (max-width: 768px) {
-    margin-left: 5%;
+    /* margin-left: 5%; */
   }
   @media (max-width: 550px) {
     display: none;
@@ -99,7 +100,7 @@ const CardWrapper = styled.div`
 
   @media (max-width: 1540px) {
     margin-top: 0rem;
-    margin-left:.5%;
+    margin-left: 0.5%;
     > * {
       &:nth-child(4) {
         display: none;
@@ -187,7 +188,7 @@ const CardWrapper1 = styled.div`
   }
   @media (max-width: 550px) {
     width: 100%;
-    margin-left:0;
+    margin-left: 0;
   }
   @media (max-width: 450px) {
     margin-top: 15%;
@@ -218,7 +219,6 @@ const MainHeading1 = styled.div`
     ${tw`mt-0`}
   }
   @media (max-width: 450px) {
-
   }
 `;
 
@@ -272,7 +272,7 @@ const SideLine1 = styled.div`
   }
   @media (max-width: 550px) {
     display: none;
-    margin-left:0;
+    margin-left: 0;
   }
 `;
 

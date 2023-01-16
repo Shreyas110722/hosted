@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { TypedAnimation } from "../../components/common";
 const Container = styled.div`
-  ${tw`flex justify-center items-center h-full w-full pr-5  `};
+  ${tw`flex justify-center items-start h-full w-full pr-5  `};
   margin-top: 3%;
   z-index: 10;
   @media (max-width: 768px) {
@@ -179,18 +179,28 @@ const IndustryImage2 = styled.div`
 `;
 const SideLine = styled.div`
   ${tw`-ml-0 mt-8  `};
-  margin-top: -18.5rem;
-  z-index: 10;
-  @media (max-width: 1230px) {
-    ${tw` -ml-0  mt-10`};
-  }
-  @media (max-width: 1120px) {
+  margin-top:9%;
+
+  @media (max-width: 2000px) {
     ${tw` -ml-0 `};
-    margin-top: -18rem;
+    margin-top:6%;
+  }
+
+  @media (max-width: 1540px) {
+    ${tw` -ml-0 `};
+    margin-top:8%;
+  }
+  @media (max-width: 1280px) {
+    ${tw` -ml-0 `};
+    margin-top:9%;
+  }
+
+  @media (max-width: 1024px) {
+    ${tw` -ml-0 `};
+    margin-top:10%;
   }
   @media (max-width: 768px) {
     ${tw` -ml-16  mt-20`};
-    margin-top: -40%;
   }
   @media (max-width: 550px) {
     display: none;
