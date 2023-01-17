@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { useLocation } from "react-router-dom";
-import Loader from "../../assets/images/Layer 1interonel.png";
 import { Link } from "react-router-dom";
 import AnimatedButton from "../../components/common/button/animatedButton";
 import {
@@ -14,6 +13,7 @@ import {
 } from "../../assets/svgicon/svgIcons";
 import * as S from "./blogDetails.styles";
 import { Navbar, Footer } from "../../components/common";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetails = (props) => {
   const [slugUrl, setSlugUrl] = React.useState(props.match.params.slugUrl);
@@ -146,11 +146,14 @@ const BlogDetails = (props) => {
     <div>
       {loading ? (
         <div className="w-full h-screen flex justify-center items-center p-10">
-          {/* <Loading /> */}
-          <img style={{ width: "20rem" }} src={Loader} alt=""></img>
+          {/* <Loading />
+          <img style={{ width: "20rem" }} src={Loader} alt=""></img> */}
         </div>
       ) : (
         <>
+          <Helmet>
+            <title>{data?.blogCollection?.items[0].title}: Interone Technologies</title>
+          </Helmet>
           <Navbar />
           <S.Container>
             <S.BlogWrapper>

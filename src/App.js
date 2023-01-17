@@ -3,9 +3,7 @@ import { useQuery } from "@apollo/client";
 import { mainQuery } from "./queries";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { ServiceDetails } from "./containers/servicecomponent";
-// import { UiUxDesign, AppMaintainance, WebDevelopment, MobileDevelopment, AppDevelopment, EComerceDevelopment, TestingServices, DevOpsDevelopment } from "./containers/servicepages/index"
 import FullpageWrapper from "./containers/swiper/pageswiper";
-// import { LinearProgress } from "./components/common";
 import { BlogsPage } from "./containers/blogsPage";
 import { BlogDetails } from "./containers/blogDetails";
 import Services from "./components/interoneUIPage/UiServices/UiServices";
@@ -13,8 +11,6 @@ import DetailedView from "./containers/technologies/TechnologyDetails/Technology
 import IndustriesFullPage from "./containers/industries/industriesCardFullpage/IndustriesFullpage";
 import NotFound from "./containers/PageNotFound/notFound";
 import * as S from "./containers/swiper/navbar.styles";
-// import IndustriesFullPage from "./containers/industries/industriesCardFullpage/IndustriesFullpage";
-// import Uiheader from "./components/interoneUIPage/Uiheader";
 
 function App() {
   const { loading, data, error } = useQuery(mainQuery);

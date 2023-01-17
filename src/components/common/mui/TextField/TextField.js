@@ -65,7 +65,7 @@ const TextField = (props) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full" style={{ width: "100%" }}>
       <TextBox
         {...props}
         fullWidth

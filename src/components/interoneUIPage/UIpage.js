@@ -11,6 +11,7 @@ import RecentWork from "./UiRecentWork";
 import { useQuery } from "@apollo/client";
 import { serviceContent } from "../../queries";
 import { Navbar } from "../common";
+import { Helmet } from "react-helmet-async";
 
 const uiData = [
   {
@@ -93,6 +94,9 @@ export function UiWebPage(props) {
     return (
       <>
         <S.SmoothScroll>
+          <Helmet>
+            <title>{params.id} : Interone Technologies</title>
+          </Helmet>
           <S.Container>
             <Navbar />
             <S.Header></S.Header>
@@ -120,11 +124,8 @@ export function UiWebPage(props) {
 
                   <S.UnorderedList>
                     {parsed?.length &&
-                      parsed?.map((item,index) => (
-                        <S.List
-                          key={index}
-                          onClick={() => handleChange(item)}
-                        >
+                      parsed?.map((item, index) => (
+                        <S.List key={index} onClick={() => handleChange(item)}>
                           <S.TitleContainer>
                             <Link to={`/service/${item.title}`}>
                               <S.Heading>{item.title}</S.Heading>
@@ -136,7 +137,12 @@ export function UiWebPage(props) {
                 </S.MenuWrapper>
               </S.HeroMenu>
               {data?.servicesCollection?.items.map((item, index) => (
-                <S.HeroText key={index}>{item.content}</S.HeroText>
+                <>
+                  <Helmet>
+                    <meta name="description" content={item.content} />
+                  </Helmet>
+                  <S.HeroText key={index}>{item.content}</S.HeroText>
+                </>
               ))}
             </S.HeroContent>
           </S.Container>
