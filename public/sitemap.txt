@@ -1,5 +1,0 @@
-https://interone.netlify.app/service/:id
-https://interone.netlify.app/blogs" 
-https://interone.netlify.app/blogs/:slugUrl
-https://interone.netlify.app/service/:id/:header
-           
